@@ -8,6 +8,7 @@ namespace HelloConsoleApp
         {
             Console.WriteLine("Program na powitanie."); // przechodzi do nowego wiersza
             Console.Write("Kolejne powitanie!"); // nie przechodzi do nowego wiersza
+            //Console.ReadKey(); // oczekuje na wciśnięcie klawisza
             Console.WriteLine("");
 
             Console.Write("Podaj imie: ");
