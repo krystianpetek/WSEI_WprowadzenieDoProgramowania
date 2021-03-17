@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "HelloConsoleBatch": {
+      "commandName": "Project",
+      "commandLineArgs": "Krystian Petek 22"
+    }
+  }
+}
