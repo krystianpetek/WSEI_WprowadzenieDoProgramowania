@@ -14,23 +14,37 @@ namespace HelloConsoleVBDialog
             Console.WriteLine("Program na powitanie.");
 
             string imie = Interaction.InputBox("Podaj imię", "Okienko imię");
-            Console.WriteLine("Podano imię: " + imie);
-
-            string nazwisko = Interaction.InputBox("Podaj nazwisko", "Okienko nazwisko");
-            Console.WriteLine("Podano nazwisko: " + nazwisko);
-
-            Interaction.MsgBox("Witaj " + imie + " " + nazwisko);
-            Interaction.MsgBox(string.Format("Witaj {0} {1}. Czy Pan {0} rzeczywiście nazywa się {1}?", imie, nazwisko));
-
-            int wiek = Convert.ToInt32(Interaction.InputBox("Podaj wiek", "Okienko wiek"));
-            Console.WriteLine("Podano wiek: " + wiek);
-            if (wiek < 67)
+            if (imie == "" | imie == " ")
             {
-                Interaction.MsgBox("do emerytury zostało Ci " + (67 - wiek) + "lat", MsgBoxStyle.OkOnly | MsgBoxStyle.Information, "Okienko emerytura");
+                Console.WriteLine("Nie wprowadzono danych, koniec");
             }
             else
             {
-                Interaction.MsgBox("Jesteś emerytem", MsgBoxStyle.OkOnly | MsgBoxStyle.Information, "okienko emerytura");
+                Console.WriteLine("Podano imię: " + imie);
+                string nazwisko = Interaction.InputBox("Podaj nazwisko", "Okienko nazwisko");
+                if (nazwisko == "" | nazwisko == " ")
+                {
+                    Console.WriteLine("Nie wprowadzono danych, koniec");
+                }
+                else
+                {
+                    Console.WriteLine("Podano nazwisko: " + nazwisko);
+                    Interaction.MsgBox(string.Format("Witaj {0}. Czy mam na nazwisko {1}?", imie, nazwisko));
+                    int wiek = Convert.ToInt32(Interaction.InputBox("Podaj wiek", "Okienko wiek"));
+                    Console.WriteLine("Podano wiek: " + wiek);
+                    if (wiek < 0)
+                    {
+                        Console.WriteLine("Błędnie wprowadzone dane");
+                    }
+                    else if (wiek < 67)
+                    {
+                        Interaction.MsgBox("do emerytury zostało Ci " + (67 - wiek) + " lat", MsgBoxStyle.OkOnly | MsgBoxStyle.Information, "Okienko emerytura");
+                    }
+                    else
+                    {
+                        Interaction.MsgBox("Jesteś emerytem", MsgBoxStyle.OkOnly | MsgBoxStyle.Information, "okienko emerytura");
+                    }
+                }
             }
         }
     }
