@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloConsoleAppBatch", "Hel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloConsoleVBDialog", "HelloConsoleVBDialog\HelloConsoleVBDialog.csproj", "{3659C179-6D51-4BB4-AA8E-770028690F39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWinFormsApp", "HelloWinFormsApp\HelloWinFormsApp.csproj", "{0436A889-FF18-4DAA-AB68-A23F2580C121}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWinFormsApp", "HelloWinFormsApp\HelloWinFormsApp.csproj", "{0436A889-FF18-4DAA-AB68-A23F2580C121}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWPFApp", "HelloWPFApp\HelloWPFApp.csproj", "{9F6A8280-A847-44F9-86B2-DADC3C2CCAC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{0436A889-FF18-4DAA-AB68-A23F2580C121}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0436A889-FF18-4DAA-AB68-A23F2580C121}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0436A889-FF18-4DAA-AB68-A23F2580C121}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F6A8280-A847-44F9-86B2-DADC3C2CCAC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F6A8280-A847-44F9-86B2-DADC3C2CCAC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F6A8280-A847-44F9-86B2-DADC3C2CCAC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F6A8280-A847-44F9-86B2-DADC3C2CCAC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
