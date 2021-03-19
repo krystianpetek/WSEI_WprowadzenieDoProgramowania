@@ -101,24 +101,23 @@ namespace HelloWinFormsApp
             this.buttonOk.TabIndex = 6;
             this.buttonOk.Text = "Kliknij";
             this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
             // labelKomunikat1
             // 
             this.labelKomunikat1.AutoSize = true;
-            this.labelKomunikat1.Location = new System.Drawing.Point(57, 241);
+            this.labelKomunikat1.Location = new System.Drawing.Point(57, 223);
             this.labelKomunikat1.Name = "labelKomunikat1";
-            this.labelKomunikat1.Size = new System.Drawing.Size(74, 15);
+            this.labelKomunikat1.Size = new System.Drawing.Size(0, 15);
             this.labelKomunikat1.TabIndex = 7;
-            this.labelKomunikat1.Text = "Komunikat 1";
             // 
             // labelKomunikat2
             // 
             this.labelKomunikat2.AutoSize = true;
-            this.labelKomunikat2.Location = new System.Drawing.Point(175, 241);
+            this.labelKomunikat2.Location = new System.Drawing.Point(57, 265);
             this.labelKomunikat2.Name = "labelKomunikat2";
-            this.labelKomunikat2.Size = new System.Drawing.Size(74, 15);
+            this.labelKomunikat2.Size = new System.Drawing.Size(0, 15);
             this.labelKomunikat2.TabIndex = 8;
-            this.labelKomunikat2.Text = "Komunikat 2";
             // 
             // Form1
             // 

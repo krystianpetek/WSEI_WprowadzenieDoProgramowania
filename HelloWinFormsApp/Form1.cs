@@ -36,5 +36,24 @@ namespace HelloWinFormsApp
         {
 
         }
+
+        private void buttonOk_Click(object sender, EventArgs e)
+        {
+            labelKomunikat1.Text = "Witaj, " + textBoxImie.Text + " " + textBoxNazwisko.Text;
+            int wiek = Convert.ToInt32(textBoxWiek.Text);
+            if (wiek <= 0)
+            {
+                labelKomunikat2.Text = "Błędnie wprowadzone dane";
+            }
+            else if (wiek < 67)
+            {
+                wiek = 67 - wiek;
+                labelKomunikat2.Text = ($"do emerytury zostało Ci {wiek} lat");
+            }
+            else
+            {
+                labelKomunikat2.Text = "jesteś emerytem";
+            }
+        }
     }
 }
