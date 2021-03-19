@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HelloWPFApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Aplikacja Hello WPF" Height="450" Width="800">
     <Grid>
-        
+        <Label x:Name="labelImie" Content="Imię" HorizontalAlignment="Left" Margin="50,50,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelNazwisko" Content="Nazwisko" HorizontalAlignment="Left" Margin="50,100,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelWiek" Content="Wiek" HorizontalAlignment="Left" Margin="50,150,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxImie" HorizontalAlignment="Left" Height="23" Margin="150,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" LostFocus="imieUtrataFocusu"/>
+        <TextBox x:Name="textBoxNazwisko" HorizontalAlignment="Left" Height="23" Margin="150,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" LostFocus="nazwiskoUtrataFocusu"/>
+        <TextBox x:Name="textBoxWiek" HorizontalAlignment="Left" Height="23" Margin="150,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" LostFocus="wiekUtrataFocusu"/>
+        <Button x:Name="buttonClear" Content="Wyczyść" HorizontalAlignment="Left" Margin="350,75,0,0" VerticalAlignment="Top" Width="75" Click="clickWyczysc"/>
+        <Label x:Name="labelKomunikat1" Content="" HorizontalAlignment="Left" Margin="50,200,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelKomunikat2" Content="" HorizontalAlignment="Left" Margin="50,250,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>

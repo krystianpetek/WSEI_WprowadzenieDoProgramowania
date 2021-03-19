@@ -24,5 +24,42 @@ namespace HelloWPFApp
         {
             InitializeComponent();
         }
+
+        private void imieUtrataFocusu(object sender, RoutedEventArgs e)
+        {
+            labelKomunikat1.Content = ($"Witaj {textBoxImie.Text} {textBoxNazwisko.Text}");
+        }
+
+        private void nazwiskoUtrataFocusu(object sender, RoutedEventArgs e)
+        {
+            labelKomunikat1.Content = ($"Witaj {textBoxImie.Text} {textBoxNazwisko.Text}");
+        }
+
+        private void wiekUtrataFocusu(object sender, RoutedEventArgs e)
+        {
+            int wiek = Convert.ToInt32(textBoxWiek.Text);
+            if(wiek <= 0)
+            {
+                labelKomunikat2.Content = "Wprowadzono błędne dane"; 
+            } 
+            else if ( wiek < 67 )
+            {
+                int wiekOblicz = 67 - wiek;
+                labelKomunikat2.Content = ($"Mając {wiek} lat, pozostało Ci {wiekOblicz} do emerytury");
+            }
+            else
+            {
+                labelKomunikat2.Content = "Jesteś na emeryturze";
+            }
+        }
+
+        private void clickWyczysc(object sender, RoutedEventArgs e)
+        {
+            textBoxImie.Text = "";
+            textBoxNazwisko.Text = "";
+            textBoxWiek.Text = "";
+            labelKomunikat1.Content = "";
+            labelKomunikat2.Content = "";
+        }
     }
 }
