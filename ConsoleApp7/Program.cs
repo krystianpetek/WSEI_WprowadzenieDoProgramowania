@@ -14,7 +14,7 @@ namespace ConsoleApp7
                 if (linia == null || linia == "") break;
                 for (int i = 0; i < 2; i++)
                 {
-                    var tab = linia.Split(" ");
+                    var tab = linia.Split(" ",StringSplitOptions.RemoveEmptyEntries);
                     BigInteger a = BigInteger.Parse(tab[0]);
                     BigInteger b = BigInteger.Parse(tab[1]);
                     suma = (a - b);
