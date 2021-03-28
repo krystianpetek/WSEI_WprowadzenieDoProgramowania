@@ -1,2 +1,2 @@
-# Lab02
+# lab02
  laboratoria 2
