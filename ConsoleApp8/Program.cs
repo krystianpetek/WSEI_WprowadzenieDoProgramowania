@@ -13,7 +13,7 @@ namespace ConsoleApp8
                 BigInteger liczbaRazem = BigInteger.Parse(Console.ReadLine());
                 BigInteger liczbaWiecej = BigInteger.Parse(Console.ReadLine());
                 
-                if(liczbaRazem < liczbaWiecej || /*liczbaRazem % 2 == 1 || liczbaWiecej % 2 == 1*/)
+                if(liczbaRazem < liczbaWiecej /*|| liczbaRazem % 2 == 1 || liczbaWiecej % 2 == 1*/)
                 {
                     break;
                 }
