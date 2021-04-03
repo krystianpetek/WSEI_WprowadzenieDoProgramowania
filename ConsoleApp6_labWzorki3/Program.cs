@@ -13,28 +13,29 @@ namespace ConsoleApp6_labWzorki3
 
         public static void wyswietlZOdbicie(int n)
         {
-            for(int i = 0;i<n;i++)
-            {
+            if (n < 4) throw new ArgumentException("Zbyt mały rozmiar");
+
+            // PIERWSZA LINIA
+            for (int i = 0; i < n; i++)
                 Star();
-            }
             NewLine();
-            for(int i = 1; i<n-1; i++)
+
+            // ŚRODEK
+            for (int i = 1; i < n - 1; i++)
             {
                 for (int j = 0; j < i; j++)
-                {
                     Space();
-                }
                 StarLn();
             }
+
+            // OSTATNIA LINIA
             for (int i = 0; i < n; i++)
-            {
                 Star();
-            }
         }
 
         static void Main(string[] args)
         {
-            wyswietlZOdbicie(9);
+            wyswietlZOdbicie(10);
         }
     }
 }
