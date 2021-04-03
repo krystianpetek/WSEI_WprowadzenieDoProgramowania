@@ -13,6 +13,9 @@ namespace ConsoleApp8_labWzorki5
         static void NewLine() => Console.WriteLine();
         public static void klepsydra(int n)
         {
+            if (n < 5)
+                throw new ArgumentException("Zbyt mały rozmiar");
+
             // PIERWSZA LINIA
             for (int i = 0; i < n; i++)
                 Star();
@@ -56,7 +59,6 @@ namespace ConsoleApp8_labWzorki5
         static void Main(string[] args)
         {
             klepsydra(7);
-            klepsydra(8);
         }
     }
 }
