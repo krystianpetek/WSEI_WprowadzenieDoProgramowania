@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp9_labWzorki6", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp10_labWzorki7", "ConsoleApp10_labWzorki7\ConsoleApp10_labWzorki7.csproj", "{1519A288-5E26-49EB-A40E-B861FFBB6B1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp11_labWzorki8", "ConsoleApp11_labWzorki8\ConsoleApp11_labWzorki8.csproj", "{8D6758FD-74BA-4DC8-8D0C-8FF1CE10474B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp12_ZADANIE_WZORKI", "ConsoleApp12_ZADANIE_WZORKI\ConsoleApp12_ZADANIE_WZORKI.csproj", "{961249E3-295B-44B5-8545-3B8A08D97A20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{1519A288-5E26-49EB-A40E-B861FFBB6B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1519A288-5E26-49EB-A40E-B861FFBB6B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1519A288-5E26-49EB-A40E-B861FFBB6B1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D6758FD-74BA-4DC8-8D0C-8FF1CE10474B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D6758FD-74BA-4DC8-8D0C-8FF1CE10474B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D6758FD-74BA-4DC8-8D0C-8FF1CE10474B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D6758FD-74BA-4DC8-8D0C-8FF1CE10474B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{961249E3-295B-44B5-8545-3B8A08D97A20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{961249E3-295B-44B5-8545-3B8A08D97A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{961249E3-295B-44B5-8545-3B8A08D97A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{961249E3-295B-44B5-8545-3B8A08D97A20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
