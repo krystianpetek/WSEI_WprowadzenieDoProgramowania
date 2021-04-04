@@ -7,7 +7,7 @@ namespace ConsoleApp8
     {
         static void Main(string[] args)
         {
-            for(int i = 0;i<10;i++)
+            for(int i = 0;i<1;i++)
             {
                 
                 BigInteger liczbaRazem = BigInteger.Parse(Console.ReadLine());
