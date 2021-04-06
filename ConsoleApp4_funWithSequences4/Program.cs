@@ -4,6 +4,14 @@ namespace ConsoleApp4_funWithSequences4
 {
     class Program
     {
+        // Fun With Sequences Act4
+        
+        /* DANE WEJSCIOWE:
+         * 5 2
+         * -1 2 -1 1 -1
+         * 3 -2 -1 1 2
+         */
+
         static void Main(string[] args)
         {
             string pierwszaLinia = Console.ReadLine();
