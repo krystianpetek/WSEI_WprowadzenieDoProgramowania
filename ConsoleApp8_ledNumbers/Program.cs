@@ -4,6 +4,7 @@ namespace ConsoleApp8_ledNumbers
 {
     class Program
     {
+        // LED Numbers
         static void Main(string[] args)
         {
             // JEDEN
@@ -59,9 +60,7 @@ namespace ConsoleApp8_ledNumbers
             string wejscie = Console.ReadLine();
             int[] liczby = new int[wejscie.Length];
             for (int a = 0; a < wejscie.Length; a++)
-            {
                 liczby[a] = int.Parse(wejscie[a].ToString());
-            }
             int licznikG = 0;
             int licznikS = 0;
             int licznikD = 0;
@@ -70,7 +69,6 @@ namespace ConsoleApp8_ledNumbers
             // GÓRA
             while (licznikG != liczby.Length)
             {
-                
                 switch (liczby[licznikG])
                 {
                     case 1:
@@ -133,7 +131,6 @@ namespace ConsoleApp8_ledNumbers
                             Console.Write(goraZero[0] + goraZero[1] + goraZero[2]);
                             break;
                         }
-
                 }
                 if (licznikG == liczby.Length)
                     Console.WriteLine();
@@ -204,12 +201,11 @@ namespace ConsoleApp8_ledNumbers
                             Console.Write(srodekZero[0] + srodekZero[1] + srodekZero[2]);
                             break;
                         }
-
                 }
                 if (licznikS == liczby.Length)
                     Console.WriteLine();
             }
-            
+
             // DOL
             while (licznikD != liczby.Length)
             {
@@ -275,12 +271,10 @@ namespace ConsoleApp8_ledNumbers
                             Console.Write(dolZero[0] + dolZero[1] + dolZero[2]);
                             break;
                         }
-
                 }
                 if (licznikD == liczby.Length)
                     Console.WriteLine();
             }
-            
         }
     }
 }
