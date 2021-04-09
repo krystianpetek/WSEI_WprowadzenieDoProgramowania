@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp6_funWithSequence
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp7_funWithSequences7", "ConsoleApp7_funWithSequences7\ConsoleApp7_funWithSequences7.csproj", "{B2C1653B-D084-4C1C-871A-988F3CAD442E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp8_ledNumbers", "ConsoleApp8_ledNumbers\ConsoleApp8_ledNumbers.csproj", "{C42DE7BD-8EC4-4761-BC11-7E05D5AB47E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp8_ledNumbers", "ConsoleApp8_ledNumbers\ConsoleApp8_ledNumbers.csproj", "{C42DE7BD-8EC4-4761-BC11-7E05D5AB47E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp9_DIGNUM", "ConsoleApp9_DIGNUM\ConsoleApp9_DIGNUM.csproj", "{5FD358DB-A931-4C2C-ADFB-7BD30F485C69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp9_DIGNUM", "ConsoleApp9_DIGNUM\ConsoleApp9_DIGNUM.csproj", "{5FD358DB-A931-4C2C-ADFB-7BD30F485C69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp10_characterPatterns1", "ConsoleApp10_characterPatterns1\ConsoleApp10_characterPatterns1.csproj", "{CD0F8305-8F54-4453-84D8-47BD2912FF5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{5FD358DB-A931-4C2C-ADFB-7BD30F485C69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FD358DB-A931-4C2C-ADFB-7BD30F485C69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FD358DB-A931-4C2C-ADFB-7BD30F485C69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD0F8305-8F54-4453-84D8-47BD2912FF5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD0F8305-8F54-4453-84D8-47BD2912FF5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD0F8305-8F54-4453-84D8-47BD2912FF5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD0F8305-8F54-4453-84D8-47BD2912FF5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
