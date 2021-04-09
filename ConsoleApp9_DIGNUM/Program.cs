@@ -4,22 +4,18 @@ namespace ConsoleApp9_DIGNUM
 {
     class Program
     {
+        // DIGNUM
+
         static void Main(string[] args)
         {
             while (true)
             {
-                
-
                 string liniaGora = Console.ReadLine();
-
                 if (liniaGora == "" || liniaGora == " " || liniaGora == null)
                     break;
 
                 string liniaSrodek = Console.ReadLine();
-            string liniaDol = Console.ReadLine();
-
-                
-
+                string liniaDol = Console.ReadLine();
                 char[] znakiGora = liniaGora.ToCharArray();
                 char[] znakiSrodek = liniaSrodek.ToCharArray();
                 char[] znakiDol = liniaDol.ToCharArray();
@@ -69,11 +65,10 @@ namespace ConsoleApp9_DIGNUM
                     x += 3;
                     y += 3;
                     z += 3;
-                    
+
                 }
                 Console.WriteLine();
             }
         }
-
     }
 }
