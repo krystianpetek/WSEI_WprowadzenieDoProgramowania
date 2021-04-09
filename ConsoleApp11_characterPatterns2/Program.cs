@@ -4,7 +4,7 @@ namespace ConsoleApp11_characterPatterns2
 {
     class Program
     {
-        // Character Patterns 1
+        // Character Patterns 2
         // DANE WEJSCIOWE:
         // 3
         // 3 1
