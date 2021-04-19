@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp14_characterPatte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp0_tablice", "ConsoleApp0_tablice\ConsoleApp0_tablice.csproj", "{A2D98B4E-EB89-494A-AC56-A8577357673E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp15_characterPatterns6", "ConsoleApp15_characterPatterns6\ConsoleApp15_characterPatterns6.csproj", "{EA4F0636-AA1E-4121-ACAF-7EE57598760C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{A2D98B4E-EB89-494A-AC56-A8577357673E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2D98B4E-EB89-494A-AC56-A8577357673E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2D98B4E-EB89-494A-AC56-A8577357673E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA4F0636-AA1E-4121-ACAF-7EE57598760C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA4F0636-AA1E-4121-ACAF-7EE57598760C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA4F0636-AA1E-4121-ACAF-7EE57598760C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA4F0636-AA1E-4121-ACAF-7EE57598760C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
