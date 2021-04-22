@@ -125,7 +125,7 @@ namespace LED_Numbers
                             Console.Write(tab9[0, i]);
                         break;
                 }
-                if(x == n.Length-1)
+                if (x == n.Length - 1)
                     Console.WriteLine();
             }
             for (int x = 0; x < n.Length; x++)
