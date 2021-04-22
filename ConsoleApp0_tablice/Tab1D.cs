@@ -38,28 +38,17 @@ namespace ConsoleApp0_tablice
             return "[" + string.Join(", ", tab) + "]";
         }
 
+
         // == Zadania ============================
-        
+
         /// <summary>
         /// Zwraca sumę liczb parzystych zapisanych w tablicy zadanej jako parametr
         /// </summary>
         public static int SumaParzystych(params int[] tab)
-        {//GIT
+        {
             Debug.Assert(tab != null);
             Debug.Assert(tab.Length > 0);
-            int suma = 0;
-            for (int i = 0; i < tab.Length; i++)
-            {
-                if (tab[i] % 2 == 0)
-                {
-                    suma = suma + tab[i];
-                }
-            }
-            //else
-            //        throw new NotImplementedException("Nie zaimplementowano");
-            return suma;
-            
-            //
+            throw new NotImplementedException();
         }
 
 
