@@ -14,6 +14,7 @@ namespace ConsoleApp7_funWithSequences7
 
         static void Main(string[] args)
         {
+
             int n = int.Parse(Console.ReadLine());
             string S = Console.ReadLine();
             string[] tablicaS = S.Split(" ", StringSplitOptions.RemoveEmptyEntries);
