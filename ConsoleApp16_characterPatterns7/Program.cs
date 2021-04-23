@@ -13,13 +13,13 @@ namespace ConsoleApp16_characterPatterns7
 
         static void Main(string[] args)
         {
-          // S - 3
-          //../\..
-          //./..\.
-          ///....\
-          //\..../
-          //.\../.
-          //..\/..
+            // S - 3
+            //../\..
+            //./..\.
+            ///....\
+            //\..../
+            //.\../.
+            //..\/..
 
             int t = int.Parse(Console.ReadLine());
             for (int i = 0; i < t; i++)
@@ -30,53 +30,53 @@ namespace ConsoleApp16_characterPatterns7
                 int c = int.Parse(liniaTab[1]); // columns
                 int s = int.Parse(liniaTab[2]); // size of each diamond
 
-                //for(int a = 0;a<s-1;a++)
-                //{
-                //    Console.Write(".");
-                //}
-                //Console.Write("/");
-                //Console.Write("\\");
-                //for(int a = s-1;a>0;a--)
-                //{
-                //    Console.Write(".");
-                //}
-
-                for (int a = s; a >0 ; a--)
+                for (int rows = 0; rows < r; rows++)
                 {
-                    for (int b = a; b >1 ; b--)
-                    {
-                        Console.Write(".");
-                    }
-                    Console.Write("/");
 
-                    for(int x = s; x>a;x--)
+                    for (int a = s; a > 0; a--)
                     {
-                        Console.Write(".");
-                    }
+                        for (int cols = 0; cols < c; cols++)
+                        {
 
+                            for (int b = a; b > 1; b--)
+                                Console.Write(".");
+                            Console.Write("/");
 
-                    for(int b = 0;b<s;b++)
-                    {
-                        Console.Write(".");
-                        for(int y = b;y>0;y--)
+                            for (int d = s; d > a; d--)
+                                Console.Write(".");
+
+                            for (int g = a; g < s; g++)
+                                Console.Write(".");
                             Console.Write("\\");
+
+                            for (int h = a; h > 1; h--)
+                                Console.Write(".");
+                        }
+                        Console.WriteLine();
                     }
-                    Console.WriteLine();
 
+                    for (int a = 0; a < s; a++)
+                    {
+                        for (int cols = 0; cols < c; cols++)
+                        {
+                            for (int b = 0; b < a; b++)
+                                Console.Write(".");
+                            Console.Write("\\");
 
+                            for (int d = s; d > a + 1; d--)
+                                Console.Write(".");
+                            
+                            for (int g = s; g > a + 1; g--)
+                                Console.Write(".");
+                            Console.Write("/");
+                            
+                            for (int h = 0; h < a; h++)
+                                Console.Write(".");
+                        }
+                        Console.WriteLine();
+                    }
                 }
-
-            //    for (int x = 0; x < s; x++)
-            //    {
-
-            //        Console.Write("\\");
-            //        for (int y = x; y < s; y++)
-
-
-
-            //            Console.Write(".");
-
-            //    }
+                Console.WriteLine();
             }
         }
     }
