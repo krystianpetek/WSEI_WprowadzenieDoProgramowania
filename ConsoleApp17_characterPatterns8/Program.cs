@@ -31,12 +31,10 @@ namespace ConsoleApp17_characterPatterns8
 
                 for (int rows = 0; rows < r; rows++)
                 {
-
                     for (int a = s; a > 0; a--)
                     {
                         for (int cols = 0; cols < c; cols++)
                         {
-
                             for (int b = a; b > 1; b--)
                                 Console.Write(".");
                             Console.Write("/");
