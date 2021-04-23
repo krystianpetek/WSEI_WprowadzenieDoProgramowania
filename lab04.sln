@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp15_characterPatte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp16_characterPatterns7", "ConsoleApp16_characterPatterns7\ConsoleApp16_characterPatterns7.csproj", "{947D8088-308E-42FB-8900-FA1A07667FBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "number", "number\number.csproj", "{7322644A-FAD2-4580-B6AD-AD79A9D568B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "number", "number\number.csproj", "{7322644A-FAD2-4580-B6AD-AD79A9D568B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp17_characterPatterns8", "ConsoleApp17_characterPatterns8\ConsoleApp17_characterPatterns8.csproj", "{A2C569C5-4036-4FE8-8378-5265B403FFF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{7322644A-FAD2-4580-B6AD-AD79A9D568B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7322644A-FAD2-4580-B6AD-AD79A9D568B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7322644A-FAD2-4580-B6AD-AD79A9D568B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2C569C5-4036-4FE8-8378-5265B403FFF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2C569C5-4036-4FE8-8378-5265B403FFF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2C569C5-4036-4FE8-8378-5265B403FFF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2C569C5-4036-4FE8-8378-5265B403FFF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
