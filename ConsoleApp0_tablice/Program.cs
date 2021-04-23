@@ -12,8 +12,11 @@ namespace ConsoleApp0_tablice
             int[] tab1 = Tab1D.GenTab(15, -5, 5);
             Console.WriteLine(Tab1D.ConvertToString(tab1));
 
-            //(int min, int max) = Tab1D.MinMax(tab1); //trzeba zaprogramować MinMax
-            //Console.WriteLine( $"min={min} max={max}" );
+            (int min, int max) = Tab1D.MinMax(tab1); //trzeba zaprogramować MinMax
+            Console.WriteLine( $"min={min} max={max}" );
+
+            int[] tab2 = Tab1D.GenTab();
+            Console.WriteLine(Tab1D.ConvertToString(tab2) + " Suma parzystych: "+ Tab1D.SumaParzystych(tab2));
 
         }
     }

@@ -48,7 +48,16 @@ namespace ConsoleApp0_tablice
         {
             Debug.Assert(tab != null);
             Debug.Assert(tab.Length > 0);
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            int dlugoscTablicy = tab.Length;
+            int suma = 0;
+            for (int i = 0; i < dlugoscTablicy; i++)
+            {
+                if (tab[i] % 2 == 0)
+                    suma += tab[i];
+            }
+            return suma;
+            //ZROBIONE
         }
 
 
@@ -150,10 +159,22 @@ namespace ConsoleApp0_tablice
         {
             Debug.Assert(tab != null);
             Debug.Assert(tab.Length > 0);
-            throw new NotImplementedException();
+            int min = tab[0];
+            int max = tab[0];
+            int i = 0;
+            while(i != tab.Length)
+            {
+                if (tab[i] > max)
+                    max = tab[i];
+
+                if (tab[i] < min)
+                    min = tab[i];
+
+                i++;
+            }
+            return(min, max);
+            //ZROBIONE
         }
-
-
 
         /// <summary>
         /// Zwraca parę wartości: minimum i jego indeks (miejsce wystapienia w tablicy)
