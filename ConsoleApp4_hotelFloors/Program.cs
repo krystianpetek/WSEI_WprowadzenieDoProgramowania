@@ -25,8 +25,7 @@ namespace ConsoleApp4_hotelFloors
                         if (wejscie[y] != '#' && wejscie[y] != '-' && wejscie[y] != '*')
                             throw new ArgumentException("Błędne dane");
 
-                        rzutGora[x, y] = wejscie[y];
-                        
+                        rzutGora[x, y] = wejscie[y];  
                     }
                 }
 
@@ -39,43 +38,26 @@ namespace ConsoleApp4_hotelFloors
                             liczbaOsob++;
                     }
 
-
                 int pomieszczenie = 0;
                 for (int a = 1; a < rzutGora.GetLength(0) - 1; a++)
                 {
-                    for (int b = 1; b < rzutGora.GetLength(1)-1; b++)
+                    for (int b = 1; b < rzutGora.GetLength(1); b++)
                     {
                         char znakAktualny = rzutGora[a, b];
                         char znakDol = rzutGora[a + 1, b];
-                        Console.WriteLine(a + " " + b);
                         if (znakAktualny == '*' || znakAktualny == '-')
                         {
                             if (znakDol == '*' || znakDol == '-')
-                            {
-
                                 a++;
-                                break;
-                            }
-                            else {
-                                
-                            }
                         }
-                        else if(znakAktualny == '#' && znakAktualny-1 == '#')
-                        {
-                            continue;
-                        }
-                        else
-                        {
+                        else if(znakAktualny == '#' && rzutGora[a,b-1] != '#')
                             pomieszczenie++;
-                        }
-
+                        
                     }
-                    Console.WriteLine("pomieszczeń" + pomieszczenie);
                 }
-
-                Console.WriteLine("liczbaOsob" + liczbaOsob);
                 double oblicz = (double)liczbaOsob / (double)pomieszczenie;
-                Console.WriteLine(oblicz);
+                Console.WriteLine($"{Math.Round(oblicz,2):F2}");
+
                 //// WYPISZ
                 //for(int iter = 0;iter<M;iter++)
                 //    for(int iter2 = 0;iter2<N;iter2++)
