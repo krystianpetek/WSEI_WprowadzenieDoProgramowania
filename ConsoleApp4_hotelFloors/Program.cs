@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace ConsoleApp4_hotelFloors
 {
@@ -38,18 +39,74 @@ namespace ConsoleApp4_hotelFloors
                 // LICZENIE POMIESZCZEŃ
                 int pomieszczenie = 0;
 
-                for (int a = 1; a < rzutGora.GetLength(0)-1; a++) 
-                    for (int b = 1; b < rzutGora.GetLength(1)-1; b++)
+                for (int a = 1; a < rzutGora.GetLength(0) - 1; a++)
+                {
+                    for (int b = 1; b < rzutGora.GetLength(1) - 1; b++)
                     {
 
-                        if(rzutGora[a-1,b] == '#')
+                        Stack myStack = new Stack();
+                        myStack.Push(a);
+                        myStack.Push(b);
+
+                        rzutGora[a, b] = '#';
+
+                        var gora = rzutGora[a - 1, b];
+                        var prawo = rzutGora[a, b + 1];
+                        var dol = rzutGora[a + 1, b];
+                        var lewo = rzutGora[a, b - 1];
+
+                        if (gora != '#')
                         {
-                            if(rzutGora)
+                            a--;
+                            rzutGora[a, b] = '#';
+                            myStack.Push(a);
+                            myStack.Push(b);
+                            break;
+                        }
+
+                        if (prawo != '#')
+                        {
+                            b++;
+                            rzutGora[a, b] = '#';
+                            myStack.Push(a);
+                            myStack.Push(b); break;
+                        }
+
+                        if (dol != '#')
+                        {
+                            a++;
+                            rzutGora[a, b] = '#';
+                            myStack.Push(a);
+                            myStack.Push(b); break;
+                        }
+
+                        if (lewo != '#')
+                        {
+                            b--;
+                            rzutGora[a, b] = '#';
+                            myStack.Push(a);
+                            myStack.Push(b); break;
+                        }
+
+                        Console.WriteLine(pomieszczenie);
+                        if (gora == '#' && prawo == '#' && dol == '#' && lewo == '#')
+                        {
+                            Console.WriteLine(myStack.Count);
+
+                            if (myStack.Count > 0)
+                            {
+                                b = Convert.ToInt32(myStack.Pop());
+                                a = Convert.ToInt32(myStack.Pop());
+                            }
+                            else
+                            {
+                                pomieszczenie++;
+                            }
                         }
                     }
-
-                        // OBLICZENIE ZAGĘSZCZENIA PIĘTRA
-                        double oblicz = (double)liczbaOsob / (double)pomieszczenie;
+                }
+                // OBLICZENIE ZAGĘSZCZENIA PIĘTRA
+                double oblicz = (double)liczbaOsob / (double)pomieszczenie;
                 Console.WriteLine($"{Math.Round(oblicz, 2):F2}");
 
                 // WYPISZ PRZELICZONY WIDOK PIĘTRA
