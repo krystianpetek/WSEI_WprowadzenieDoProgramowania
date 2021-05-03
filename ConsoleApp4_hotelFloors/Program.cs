@@ -1,6 +1,25 @@
 ﻿using System;
 using System.Collections;
-
+//3
+//5 5
+//#####
+//#**##
+//###*#
+//#**##
+//#####
+//6 10
+//##########
+//#---*--*##
+//###-*----#
+//#**#######
+//##***---##
+//##########
+//5 14
+//##############
+//#----#-#-*-#-#
+//###****#*#**-#
+//#***-#########
+//##############
 namespace ConsoleApp4_hotelFloors
 {
     class Program
@@ -61,7 +80,7 @@ namespace ConsoleApp4_hotelFloors
                             rzutGora[a, b] = '#';
                             myStack.Push(a);
                             myStack.Push(b);
-                            break;
+                            continue;
                         }
 
                         if (prawo != '#')
@@ -69,7 +88,7 @@ namespace ConsoleApp4_hotelFloors
                             b++;
                             rzutGora[a, b] = '#';
                             myStack.Push(a);
-                            myStack.Push(b); break;
+                            myStack.Push(b); continue;
                         }
 
                         if (dol != '#')
@@ -103,8 +122,10 @@ namespace ConsoleApp4_hotelFloors
                                 pomieszczenie++;
                             }
                         }
+                        Console.WriteLine(myStack.Count);
                     }
                 }
+                
                 // OBLICZENIE ZAGĘSZCZENIA PIĘTRA
                 double oblicz = (double)liczbaOsob / (double)pomieszczenie;
                 Console.WriteLine($"{Math.Round(oblicz, 2):F2}");
