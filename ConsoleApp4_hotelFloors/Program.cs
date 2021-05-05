@@ -21,12 +21,20 @@ using System.Collections;
 //###***-#*#**-#
 //#***-#########
 //##############
-//5 14
-//##############
-//#----###-*-#-#
-//###***##*#-*-#
-//#***-#########
-//##############
+//13 19
+//###################
+//#--------*--------#
+//#-#-###-#-#-###-#-#
+//#-#-#---#-#---#-#*#
+//#-#-###-#-#-###-#-#
+//###################
+//#-#-#-###-###-#-#-#
+//#-----------------#
+//#-#-###-#-#-###-#-#
+//#-#-#---#-#-**#-#-#
+//#-#-###-#-#-###-#-#
+//#-----------*-----#
+//###################
 
 namespace ConsoleApp4_hotelFloors
 {
@@ -34,102 +42,102 @@ namespace ConsoleApp4_hotelFloors
     {
         static void Main()
         {
-            int ilosc = int.Parse(Console.ReadLine());
-            for (int i = 0; i < ilosc; i++)
+            int M, N, x = 0, y = 0;
+            int ileLiczb = int.Parse(Console.ReadLine());
+            for (int i = 0; i < ileLiczb; i++)
             {
                 // WEJSCIE DANYCH
                 string[] linia = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
-                int M = Convert.ToInt32(linia[0]);
-                int N = Convert.ToInt32(linia[1]);
+                M = Convert.ToInt32(linia[0]);
+                N = Convert.ToInt32(linia[1]);
 
                 // PRZYPISANIE WARTOŚCI DO TABLICY
-                char[,] rzutGora = new char[M, N];
-                for (int x = 0; x < rzutGora.GetLength(0); x++)
+                char[,] rzutPietra = new char[M, N];
+                for (x = 0; x < rzutPietra.GetLength(0); x++)
                 {
-                    string wejscie = Console.ReadLine();
-                    for (int y = 0; y < rzutGora.GetLength(1); y++)
+                    string liniaRzutu = Console.ReadLine();
+                    for (y = 0; y < rzutPietra.GetLength(1); y++)
                     {
-                        if (wejscie[y] != '#' && wejscie[y] != '-' && wejscie[y] != '*')
+                        if (liniaRzutu[y] != '#' && liniaRzutu[y] != '-' && liniaRzutu[y] != '*')
                             throw new ArgumentException("Błędne dane");
-
-                        rzutGora[x, y] = wejscie[y];
+                        rzutPietra[x, y] = liniaRzutu[y];
                     }
                 }
 
                 // LICZENIE OSOB
                 int liczbaOsob = 0;
-                for (int aa = 1; aa < rzutGora.GetLength(0) - 1; aa++)
-                    for (int bb = 1; bb < rzutGora.GetLength(1) - 1; bb++)
-                        if (rzutGora[aa, bb] == '*')
+                for (x = 1; x < rzutPietra.GetLength(0) - 1; x++)
+                    for (y = 1; y < rzutPietra.GetLength(1) - 1; y++)
+                        if (rzutPietra[x, y] == '*')
                             liczbaOsob++;
 
                 // LICZENIE POMIESZCZEŃ
-                int pomieszczenie = 0;
+                int iloscPomieszczen = 0;
                 Stack stosPrzebiegu = new Stack();
 
-                for (int a = 1; a < rzutGora.GetLength(0) - 1; a++)
+                for (x = 1; x < rzutPietra.GetLength(0) - 1; x++)
                 {
-                    for (int b = 1; b < rzutGora.GetLength(1) - 1; b++)
+                    for (y = 1; y < rzutPietra.GetLength(1) - 1; y++)
                     {
-                        if (rzutGora[a, b] == '.' || rzutGora[a, b] == '#')
+                        if (rzutPietra[x, y] == '.' || rzutPietra[x, y] == '#')
                             continue;
                         else
                         {
                             while (true)
                             {
-                                var gora = rzutGora[a - 1, b];
-                                var prawo = rzutGora[a, b + 1];
-                                var dol = rzutGora[a + 1, b];
-                                var lewo = rzutGora[a, b - 1];
+                                var gora = rzutPietra[x - 1, y];
+                                var prawo = rzutPietra[x, y + 1];
+                                char dol = rzutPietra[x + 1, y];
+                                char lewo = rzutPietra[x, y - 1];
 
-                                //Console.WriteLine($"{a},{b}, {rzutGora[a, b]} COUNT{myStack.Count} {gora},{prawo},{dol},{lewo}");
-                                rzutGora[a, b] = '.';
+                                //Console.WriteLine($"x:{x} y:{y} znak:{rzutPietra[x, y]} stos:{stosPrzebiegu.Count} {gora},{prawo},{dol},{lewo}");
+                                rzutPietra[x, y] = '.';
 
                                 if (gora == '#' | gora == '.' && prawo == '#' | prawo == '.' && dol == '#' | dol == '.' && lewo == '#' | lewo == '.')
                                 {
                                     if (stosPrzebiegu.Count > 0)
                                     {
-                                        //Console.WriteLine($"{a},{b}, {rzutGora[a, b]} COUNT{myStack.Count} {gora},{prawo},{dol},{lewo}");
-                                        b = Convert.ToInt32(stosPrzebiegu.Pop());
-                                        a = Convert.ToInt32(stosPrzebiegu.Pop());
+                                        //Console.WriteLine($"x:{x} y:{y} znak:{rzutPietra[x, y]} stos:{stosPrzebiegu.Count} {gora},{prawo},{dol},{lewo}");
+                                        y = Convert.ToInt32(stosPrzebiegu.Pop());
+                                        x = Convert.ToInt32(stosPrzebiegu.Pop());
                                         continue;
                                     }
                                     else
                                     {
-                                        pomieszczenie++;
+                                        iloscPomieszczen++;
                                         break;
                                     }
 
                                 }
                                 if (gora == '-' || gora == '*')
                                 {
-                                    stosPrzebiegu.Push(a);
-                                    stosPrzebiegu.Push(b);
-                                    a--;
+                                    stosPrzebiegu.Push(x);
+                                    stosPrzebiegu.Push(y);
+                                    x--;
                                     continue;
                                 }
 
                                 if (prawo == '-' || prawo == '*')
                                 {
-                                    stosPrzebiegu.Push(a);
-                                    stosPrzebiegu.Push(b);
-                                    b++;
+                                    stosPrzebiegu.Push(x);
+                                    stosPrzebiegu.Push(y);
+                                    y++;
                                     continue;
                                 }
 
                                 if (dol == '-' || dol == '*')
                                 {
-                                    stosPrzebiegu.Push(a);
-                                    stosPrzebiegu.Push(b);
-                                    a++;
+                                    stosPrzebiegu.Push(x);
+                                    stosPrzebiegu.Push(y);
+                                    x++;
                                     continue;
                                 }
 
                                 if (lewo == '-' || lewo == '*')
                                 {
-                                    stosPrzebiegu.Push(a);
-                                    stosPrzebiegu.Push(b);
-                                    b--;
+                                    stosPrzebiegu.Push(x);
+                                    stosPrzebiegu.Push(y);
+                                    y--;
                                     continue;
                                 }
                             }
@@ -138,15 +146,27 @@ namespace ConsoleApp4_hotelFloors
                 }
 
                 // OBLICZENIE WYNIKU
-                double oblicz = (double)liczbaOsob / (double)pomieszczenie;
+                double oblicz = (double)liczbaOsob / (double)iloscPomieszczen;
                 Console.WriteLine($"{Math.Round(oblicz, 2):F2}");
 
-                // WYSWIETL PRZELICZONE PIETRO
-                //for (int iter = 0; iter < M; iter++)
-                //    for (int iter2 = 0; iter2 < N; iter2++)
+                ////WYSWIETL PRZELICZONE PIETRO
+                //Console.WriteLine();
+                //Console.ForegroundColor = ConsoleColor.Red;
+                //Console.WriteLine("RZUT PIĘTRA");
+                //Console.ForegroundColor = ConsoleColor.White;
+
+                //for (x = 0; x < M; x++)
+                //    for (y = 0; y < N; y++)
                 //    {
-                //        Console.Write(rzutGora[iter, iter2]);
-                //        if (iter2 == N - 1)
+                //        if (rzutPietra[x, y] == '.')
+                //        {
+                //            Console.ForegroundColor = ConsoleColor.Red;
+                //            rzutPietra[x, y] = '#';
+                //        }
+                //        else
+                //            Console.ForegroundColor = ConsoleColor.White;
+                //        Console.Write(rzutPietra[x, y]);
+                //        if (y == N - 1)
                 //            Console.WriteLine();
                 //    }
             }
