@@ -3,33 +3,35 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "probnyZadanie1", "probnyZadanie1\probnyZadanie1.csproj", "{46A8AE95-E19C-4DB8-A1E5-D2D41E028BA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "probnyZadanie1", "probnyZadanie1\probnyZadanie1.csproj", "{46A8AE95-E19C-4DB8-A1E5-D2D41E028BA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "probnyZadanie2", "probnyZadanie2\probnyZadanie2.csproj", "{CD63EE86-D3CF-4F3A-B62A-ABEFBB7706AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "probnyZadanie2", "probnyZadanie2\probnyZadanie2.csproj", "{CD63EE86-D3CF-4F3A-B62A-ABEFBB7706AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "probnyZadanie3", "probnyZadanie3\probnyZadanie3.csproj", "{53244B82-23BB-44D3-96EA-647B7AF92FA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "probnyZadanie3", "probnyZadanie3\probnyZadanie3.csproj", "{53244B82-23BB-44D3-96EA-647B7AF92FA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "probnyZadanie4", "probnyZadanie4\probnyZadanie4.csproj", "{D11F8F56-31BA-40F7-8E91-D7BF747E1031}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "probnyZadanie4", "probnyZadanie4\probnyZadanie4.csproj", "{D11F8F56-31BA-40F7-8E91-D7BF747E1031}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sprawdzianZadanie1", "sprawdzianZadanie1\sprawdzianZadanie1.csproj", "{B5F13FDA-23D1-4693-8A27-2EE420A9F2D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sprawdzianZadanie1", "sprawdzianZadanie1\sprawdzianZadanie1.csproj", "{B5F13FDA-23D1-4693-8A27-2EE420A9F2D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sprawdzianZadanie2", "sprawdzianZadanie2\sprawdzianZadanie2.csproj", "{A419ADC1-711B-45CE-BA56-CA97A0C36E31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sprawdzianZadanie2", "sprawdzianZadanie2\sprawdzianZadanie2.csproj", "{A419ADC1-711B-45CE-BA56-CA97A0C36E31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sprawdzianZadanie3", "sprawdzianZadanie3\sprawdzianZadanie3.csproj", "{327B1A1B-A4C2-4403-B948-1747D7097068}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sprawdzianZadanie3", "sprawdzianZadanie3\sprawdzianZadanie3.csproj", "{327B1A1B-A4C2-4403-B948-1747D7097068}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sprawdzianZadanie4", "sprawdzianZadanie4\sprawdzianZadanie4.csproj", "{464D9BDD-BCDA-4165-A842-FB10F90E6AEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sprawdzianZadanie4", "sprawdzianZadanie4\sprawdzianZadanie4.csproj", "{464D9BDD-BCDA-4165-A842-FB10F90E6AEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inneZadanie1", "inneZadanie1\inneZadanie1.csproj", "{C40A812C-025E-43E7-95A6-C00DD33BB723}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "inneZadanie1", "inneZadanie1\inneZadanie1.csproj", "{C40A812C-025E-43E7-95A6-C00DD33BB723}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inneZadanie2", "inneZadanie2\inneZadanie2.csproj", "{7D459902-3E57-45AF-A1C2-ACC17E792802}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "inneZadanie2", "inneZadanie2\inneZadanie2.csproj", "{7D459902-3E57-45AF-A1C2-ACC17E792802}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inneZadanie3", "inneZadanie3\inneZadanie3.csproj", "{3BE68371-86F4-400C-AA55-1D302556D08B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "inneZadanie3", "inneZadanie3\inneZadanie3.csproj", "{3BE68371-86F4-400C-AA55-1D302556D08B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inneZadanie4", "inneZadanie4\inneZadanie4.csproj", "{121A8B84-EABD-437C-856D-E2615E92E011}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "inneZadanie4", "inneZadanie4\inneZadanie4.csproj", "{121A8B84-EABD-437C-856D-E2615E92E011}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inneZadanie5", "inneZadanie5\inneZadanie5.csproj", "{C8E40F34-FC48-49B9-8241-8F0CA048B916}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "inneZadanie5", "inneZadanie5\inneZadanie5.csproj", "{C8E40F34-FC48-49B9-8241-8F0CA048B916}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inneZadanie6", "inneZadanie6\inneZadanie6.csproj", "{D5D066E9-BEB9-4478-9AE5-087AC95B329C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "inneZadanie6", "inneZadanie6\inneZadanie6.csproj", "{D5D066E9-BEB9-4478-9AE5-087AC95B329C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inneZadanie7", "inneZadanie7\inneZadanie7.csproj", "{D883E403-2DD2-40F3-A934-C78AF83FB480}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{D5D066E9-BEB9-4478-9AE5-087AC95B329C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5D066E9-BEB9-4478-9AE5-087AC95B329C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5D066E9-BEB9-4478-9AE5-087AC95B329C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D883E403-2DD2-40F3-A934-C78AF83FB480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D883E403-2DD2-40F3-A934-C78AF83FB480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D883E403-2DD2-40F3-A934-C78AF83FB480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D883E403-2DD2-40F3-A934-C78AF83FB480}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
