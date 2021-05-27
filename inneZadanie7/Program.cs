@@ -17,7 +17,6 @@ namespace inneZadanie7
                 }
                 if (check == true)
                 {
-                    if(!wynik.Contains($"{a[x]}"))
                     wynik += $"{a[x]} ";
                 }
             }
@@ -28,22 +27,7 @@ namespace inneZadanie7
                 return;
             }
 
-            //string koniec = "";
-            //for (int x = 0; x < wynik.Length; x++)
-            //{
-            //    if (koniec.Contains(wynik[x]))
-            //        continue;
-            //    else
-            //    {
-            //        koniec += $"{wynik[x]} ";
-            //    }
-
-            //}
-
-
-
             Console.WriteLine(wynik);
-
         }
         static void Main()
         {
@@ -53,8 +37,8 @@ namespace inneZadanie7
             //int[] a = new int[] { -2, -1, 0, 1, 4 };
             //int[] b = new int[] { -3, -2, -1, 1, 2, 3 };
 
-            //int[] a = new int[] { -2, -1, 0, 1, 4 };
-            //int[] b = new int[] { -2, -1, 0, 1, 4, 5, 6 };
+            int[] a = new int[] { -2, -1, 0, 1, 4 };
+            int[] b = new int[] { -2, -1, 0, 1, 4, 5, 6 };
             Print(a, b);
         }
     }
