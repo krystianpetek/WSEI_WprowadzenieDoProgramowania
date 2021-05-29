@@ -27,7 +27,21 @@ namespace inneZadanie7
                 return;
             }
 
-            Console.WriteLine(wynik);
+            string[] tab = wynik.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            int j = 0;
+            string[] temp = new string[tab.Length];
+            #region duplikaty
+            for (int i = 0; i < tab.Length - 1; i++)
+            {
+                if (tab[i] != tab[i + 1])
+                {
+                    temp[j++] = tab[i];
+                }
+            }
+            temp[j++] = tab[tab.Length - 1];
+            #endregion
+            foreach(var x in temp)
+                Console.Write($"{x} ");
         }
         static void Main()
         {
@@ -37,7 +51,7 @@ namespace inneZadanie7
             //int[] a = new int[] { -2, -1, 0, 1, 4 };
             //int[] b = new int[] { -3, -2, -1, 1, 2, 3 };
 
-            int[] a = new int[] { -2, -1, 0, 1, 4 };
+            int[] a = new int[] { -2, -1, 0, 1, 4, 4};
             int[] b = new int[] { -2, -1, 0, 1, 4, 5, 6 };
             Print(a, b);
         }
