@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadanie5_dodatkowe", "Zadan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBANK - Sorting Bank Accounts", "SBANK - Sorting Bank Accounts\SBANK - Sorting Bank Accounts.csproj", "{17245B82-AF45-4011-8E2D-7817BB3D7F36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBANK - Sorting Bank Accounts 2", "SBANK - Sorting Bank Accounts 2\SBANK - Sorting Bank Accounts 2.csproj", "{BE43D7BA-796B-4228-95FB-1F195D2CEBE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{17245B82-AF45-4011-8E2D-7817BB3D7F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17245B82-AF45-4011-8E2D-7817BB3D7F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17245B82-AF45-4011-8E2D-7817BB3D7F36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE43D7BA-796B-4228-95FB-1F195D2CEBE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE43D7BA-796B-4228-95FB-1F195D2CEBE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE43D7BA-796B-4228-95FB-1F195D2CEBE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE43D7BA-796B-4228-95FB-1F195D2CEBE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
