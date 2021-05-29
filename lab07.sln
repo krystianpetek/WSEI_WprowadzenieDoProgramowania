@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadanie1_lista", "Zadanie1_lista\Zadanie1_lista.csproj", "{69ED586F-4677-4304-ADFC-07FE29996250}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cwiczenie1_strukturyLinkowane", "Cwiczenie1_strukturyLinkowane\Cwiczenie1_strukturyLinkowane.csproj", "{F94DB62B-5D2F-403D-AB1B-C38D31BD5502}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{69ED586F-4677-4304-ADFC-07FE29996250}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69ED586F-4677-4304-ADFC-07FE29996250}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69ED586F-4677-4304-ADFC-07FE29996250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F94DB62B-5D2F-403D-AB1B-C38D31BD5502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F94DB62B-5D2F-403D-AB1B-C38D31BD5502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F94DB62B-5D2F-403D-AB1B-C38D31BD5502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F94DB62B-5D2F-403D-AB1B-C38D31BD5502}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
