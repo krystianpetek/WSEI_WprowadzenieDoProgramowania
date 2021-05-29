@@ -17,7 +17,7 @@ namespace sprawdzianZadanie4
                 }
                 if (check == true)
                     wynik.Append($"{a[x]} ");
-                    
+
             }
             
             for (int x = 0; x < b.Length; x++)
@@ -32,7 +32,6 @@ namespace sprawdzianZadanie4
                     wynik.Append($"{b[x]} ");
                     
             }
-
             if (wynik.ToString() == "")
             {
                 Console.WriteLine("empty");
@@ -40,15 +39,29 @@ namespace sprawdzianZadanie4
             }
             string[] tab = wynik.ToString().Split(" ", StringSplitOptions.RemoveEmptyEntries);
             Array.Sort(tab);
-            foreach(var x in tab)
+
+            string[] temp = new string[tab.Length];
+            int j = 0;
+          
+            #region duplikaty
+            for (int i = 0; i < tab.Length-1; i++)
+            {
+                if(tab[i] != tab[i+1])
+                {
+                    temp[j++] = tab[i];
+                }
+            }
+            temp[j++] = tab[tab.Length - 1];
+            #endregion
+            foreach (var x in temp)
                 Console.Write($"{x} ");
         }
         static void Main()
         {
             //int[] a = new int[] { 0, 1, 1, 2, 3, 3, 3 };
             //int[] b = new int[] { 0, 1, 2, 3, 3 };
-            int[] a = new int[] { -2, -1, 0, 1, 4 };
-            int[] b = new int[] { -3, -2, -1, 1, 2, 3 };
+            int[] a = new int[] { -2, -1, 0, 1, 4};
+            int[] b = new int[] { -3, -2, -1, 1, 2, 3};
 
             //int[] a = new int[] { -2, -1, 0, 1, 4 };
             //int[] b = new int[] { -2, -1, 0, 1, 4, 5, 6 };
