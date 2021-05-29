@@ -1,0 +1,41 @@
+sprawdzianZadanie1 : Wzorek
+*******
+  *****
+    ***
+      *
+sprawdzianZadanie2 : Pole ostrosłupa trójkątnego
+sprawdzianZadanie3 : Sprawdza czy w 3 liczbach jest para liczb która da sume trzeciej (YES/NO)
+sprawdzianZadanie4 : Wypisz B których nie ma w A oraz z B których nie ma w A
+
+probnyZadanie1 : Piramida odwrócona
+probnyZadanie2 : Pole trójkąta TriangleArea
+probnyZadanie3 : Oblicza sume 3 liczb i wypisuje na wyjscie lub zglasza wyjatki
+probnyZadanie4 : Srednia z tablicy
+
+inneZadanie1 : Wypisuje trójke
+inneZadanie2 : Wypisuje siódemke
+inneZadanie3 : TrapesoidIsoscalesArea
+inneZadanie4 : Wzorek
+*
+***
+*****
+*******
+inneZadanie5 : Obliczanie rozstępu dla trzech liczb całkowitych
+inneZadanie6 : Sprawdza czy w 3 liczbach jest para liczb która da sume trzeciej (YES/NO)
+inneZadanie7 : Wypisz A oraz te które są w B
+inneZadanie8 : Wzorek
+	  *
+    ***
+  *****
+*******
+inneZadanie9 : TriangleIsoscalesArea
+inneZadanie10 : Wypisz te liczby z A, których nie ma w B
+inneZadanie11 : Średnia z tablicy postrzępiona
+inneZadanie12 : Odwrocona 3
+inneZadanie13 : Sprawdza czy w 4 liczbach jest para liczb która da sume pozostałych liczb (YES/NO)
+inneZadanie14 : RegularSquarePyramidTotalSurfaceArea
+inneZadanie15 : Obliczanie rozstępu #2 dla trzech liczb całkowitych
+inneZadanie16 : Wzorek Piramida
+inneZadanie17 : TrapesoidIsoscalesPerimeter
+inneZadanie18 : TetrahedronVolume
+inneZadanie19 : Odwrocona 7
