@@ -51,8 +51,14 @@ namespace inneZadanie7
             //int[] a = new int[] { -2, -1, 0, 1, 4 };
             //int[] b = new int[] { -3, -2, -1, 1, 2, 3 };
 
-            int[] a = new int[] { -2, -1, 0, 1, 4, 4};
-            int[] b = new int[] { -2, -1, 0, 1, 4, 5, 6 };
+            //int[] a = new int[] { -2, -1, 0, 1, 4, 4};
+            //int[] b = new int[] { -2, -1, 0, 1, 4, 5, 6 };
+
+            int[] a = new int[] { -2, -1, 0, 1, 4 };
+            int[] b = new int[] { -3, -2, -1, 1, 2, 3 };
+
+            //int[] a = new int[] { 1, 2, 3 };
+            //int[] b = new int[] { -3, -2, -1 };
             Print(a, b);
         }
     }
