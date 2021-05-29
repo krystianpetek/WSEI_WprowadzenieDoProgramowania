@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cwiczenie3_zbior", "Cwiczen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadanie2_kolejkaStos", "Zadanie2_kolejkaStos\Zadanie2_kolejkaStos.csproj", "{0D9D6C00-1C6E-4F9A-9817-AC131A403780}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadanie3_zbior", "Zadanie3_zbior\Zadanie3_zbior.csproj", "{8231205B-E32E-4367-8CE2-10800A8A1EB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0D9D6C00-1C6E-4F9A-9817-AC131A403780}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D9D6C00-1C6E-4F9A-9817-AC131A403780}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D9D6C00-1C6E-4F9A-9817-AC131A403780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8231205B-E32E-4367-8CE2-10800A8A1EB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8231205B-E32E-4367-8CE2-10800A8A1EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8231205B-E32E-4367-8CE2-10800A8A1EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8231205B-E32E-4367-8CE2-10800A8A1EB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
