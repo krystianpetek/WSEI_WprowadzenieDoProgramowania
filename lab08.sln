@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cwiczenieTrojkat", "cwiczenieTrojkat\cwiczenieTrojkat.csproj", "{DBACB1F9-E307-4190-BD1D-F76D9A4EEB43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cwiczenieTrojkat", "cwiczenieTrojkat\cwiczenieTrojkat.csproj", "{DBACB1F9-E307-4190-BD1D-F76D9A4EEB43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "czlowiek", "czlowiek\czlowiek.csproj", "{EDA14610-C57E-4F78-9A4D-7E9D9D3D586E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "czlowiek", "czlowiek\czlowiek.csproj", "{EDA14610-C57E-4F78-9A4D-7E9D9D3D586E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KM003Z01 - Czas24h", "KM003Z01 - Czas24h\KM003Z01 - Czas24h.csproj", "{8D49A984-095C-4D86-B104-747B694EB30A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{EDA14610-C57E-4F78-9A4D-7E9D9D3D586E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDA14610-C57E-4F78-9A4D-7E9D9D3D586E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDA14610-C57E-4F78-9A4D-7E9D9D3D586E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D49A984-095C-4D86-B104-747B694EB30A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D49A984-095C-4D86-B104-747B694EB30A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D49A984-095C-4D86-B104-747B694EB30A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D49A984-095C-4D86-B104-747B694EB30A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
