@@ -6,7 +6,7 @@ namespace zadanieKlasaPersonChild
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Person p = new Person("edek", "Ysystia", 23);
         }
     }
 }
