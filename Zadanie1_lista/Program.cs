@@ -90,6 +90,8 @@ namespace Zadanie1_lista
 
             Console.WriteLine();
 
+            listaZwierzat.Sort((x, y) => y.Length - x.Length);
+
         }
     }
 }
