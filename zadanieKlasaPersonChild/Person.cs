@@ -105,7 +105,7 @@ namespace zadanieKlasaPersonChild
             this.FamilyName = nazwisko;
         }
         
-        public void modifyAge(int wiek)
+        virtual public void modifyAge(int wiek)
         {
             SprawdzWiek(wiek);
             this.Age = wiek;
