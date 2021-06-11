@@ -8,38 +8,108 @@ namespace zadanieKlasaPersonChild
 {
     class Person
     {
-        private string FirstName;
-        private string FamilyName;
-        private int Age;
-
-        public Person(string nazwisko, string imie, int wiek)
+        public string FirstName
         {
-            if ( (nazwisko.Contains(" ") || imie.Contains(" ") ) == false)
-            {
-                
-                if ((char.IsUpper(imie[0]) || char.IsUpper(nazwisko[0]))== true)
-                {
-                    bool czyDuze = false;
-                    for (int x = 1; x < imie.Length; x++)
-                        if (char.IsUpper(imie[x]))
-                            czyDuze = true;
+            get; protected set;
+        }
+        public string FamilyName
+        {
+            get; protected set;
+        }
+        public int Age
+        {
+            get; protected set;
+        }
 
-                    if (czyDuze == false)
-                        FirstName = imie;
-                    else
-                        Console.WriteLine("skoryguj format, pierwsza duża pozostałe małe");
-                }
+        public Person(string firstName, string familyName, int age)
+        {
+            familyName = UsunSpacje(familyName);
+            SprawdzPoprawnosc(familyName);
+            familyName = WielkoscLiter(familyName);
+
+            firstName = UsunSpacje(firstName);
+            SprawdzPoprawnosc(firstName);
+            firstName = WielkoscLiter(firstName);
+
+            SprawdzWiek(age);
+
+            this.FamilyName = familyName;
+            this.FirstName= firstName;
+            this.Age = age;
+        }
+        
+        private static void SprawdzPoprawnosc(string tekst)
+        {
+            if (tekst == null || tekst == String.Empty || tekst == "")
+                throw new ArgumentException("Wrong name!");
+
+            for (int i = 0; i < tekst.Length; i++)
+            {
+                if (!char.IsLetter(tekst[i]))
+                    throw new ArgumentException("Wrong name!");
+            }
+        }
+
+        private static string UsunSpacje(string tekst)
+        {
+            string tekstTemp = String.Empty;
+            for (int i = 0; i < tekst.Length; i++)
+            {
+                if (tekst[i] != ' ')
+                    tekstTemp += tekst[i];
+            }
+            return tekstTemp;
+        }
+
+        private static string WielkoscLiter(string tekst)
+        {
+            string tekstTemp = String.Empty;
+            for (int i = 0; i < tekst.Length; i++)
+            {
+                if (i == 0)
+                    tekstTemp += tekst[i].ToString().ToUpper();
                 else
                 {
-                    Console.WriteLine("skoryguj format, pierwsza duża pozostałe małe");
+                    tekstTemp += tekst[i].ToString().ToLower();
                 }
             }
-            else
-            {
-                Console.WriteLine("błędne imię lub nazwisko, usuń spacje");
-            }
-                FamilyName = nazwisko;
-            Age = wiek;
+            return tekstTemp;
         }
+
+        private static void SprawdzWiek(int wiek)
+        {
+            if (wiek < 0)
+                throw new ArgumentException("Age must be positive!");
+        }
+
+        public override string ToString()
+        {
+            return $"{FirstName} {FamilyName} ({Age})";
+        }
+    
+        public void modifyFirstName(string imie)
+        {
+            imie = UsunSpacje(imie);
+            SprawdzPoprawnosc(imie);
+            imie = WielkoscLiter(imie);
+
+            this.FirstName = imie;
+        }
+        
+        public void modifyFamilyName(string nazwisko)
+        {
+            nazwisko = UsunSpacje(nazwisko);
+            SprawdzPoprawnosc(nazwisko);
+            nazwisko = WielkoscLiter(nazwisko);
+
+            this.FamilyName = nazwisko;
+        }
+        
+        public void modifyAge(int wiek)
+        {
+            SprawdzWiek(wiek);
+            this.Age = wiek;
+        }
+    
     }
 }
