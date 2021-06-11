@@ -7,11 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cwiczenieTrojkat", "cwiczen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "czlowiek", "czlowiek\czlowiek.csproj", "{EDA14610-C57E-4F78-9A4D-7E9D9D3D586E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KM003Z01 - Czas24h", "KM003Z01 - Czas24h\KM003Z01 - Czas24h.csproj", "{8D49A984-095C-4D86-B104-747B694EB30A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KM003Z01 - Czas24h", "KM003Z01 - Czas24h\KM003Z01 - Czas24h.csproj", "{8D49A984-095C-4D86-B104-747B694EB30A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cwiczenieTrojkatMutable", "cwiczenieTrojkatMutable\cwiczenieTrojkatMutable.csproj", "{D7840D08-4FF9-484D-92D2-D4B24CD4AF71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cwiczenieTrojkatMutable", "cwiczenieTrojkatMutable\cwiczenieTrojkatMutable.csproj", "{D7840D08-4FF9-484D-92D2-D4B24CD4AF71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cwiczeniePhone", "cwiczeniePhone\cwiczeniePhone.csproj", "{0F8F47E2-7D35-47EA-8A58-C5E72FD7BAA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cwiczeniePhone", "cwiczeniePhone\cwiczeniePhone.csproj", "{0F8F47E2-7D35-47EA-8A58-C5E72FD7BAA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bledy", "Bledy\Bledy.csproj", "{7E090D55-A15B-492E-A730-F6DB9B41B76F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{0F8F47E2-7D35-47EA-8A58-C5E72FD7BAA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F8F47E2-7D35-47EA-8A58-C5E72FD7BAA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F8F47E2-7D35-47EA-8A58-C5E72FD7BAA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E090D55-A15B-492E-A730-F6DB9B41B76F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E090D55-A15B-492E-A730-F6DB9B41B76F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E090D55-A15B-492E-A730-F6DB9B41B76F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E090D55-A15B-492E-A730-F6DB9B41B76F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
