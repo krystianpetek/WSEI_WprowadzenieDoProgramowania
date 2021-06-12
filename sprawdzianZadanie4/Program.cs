@@ -6,7 +6,8 @@ namespace sprawdzianZadanie4
     {
         public static void Print(int[] a, int[] b)
         {
-            StringBuilder wynik = new StringBuilder();
+            //StringBuilder wynik = new StringBuilder();
+            string wynik = "";
             for (int x = 0; x < a.Length; x++)
             {
                 bool check = true;
@@ -16,8 +17,8 @@ namespace sprawdzianZadanie4
                         check = false;
                 }
                 if (check == true)
-                    wynik.Append($"{a[x]} ");
-
+                    // wynik.Append($"{a[x]} ");
+                    wynik += $"{a[x]} ";
             }
             
             for (int x = 0; x < b.Length; x++)
@@ -29,43 +30,97 @@ namespace sprawdzianZadanie4
                         check = false;
                 }
                 if (check == true)
-                    wynik.Append($"{b[x]} ");
-                    
+                    //wynik.Append($"{b[x]} ");
+                    wynik += $"{b[x]} ";
             }
             if (wynik.ToString() == "")
             {
-                Console.WriteLine("empty");
+                Console.Write("empty");
                 return;
             }
             string[] tab = wynik.ToString().Split(" ", StringSplitOptions.RemoveEmptyEntries);
-            Array.Sort(tab);
 
-            string[] temp = new string[tab.Length];
+            int[] tablica = new int[tab.Length];
+            
+            for (int i = 0; i < tablica.Length; i++)
+            {
+                tablica[i] = int.Parse(tab[i]);
+            }
+            
+            Array.Sort(tablica);
+
+            int[] temp = new int[tablica.Length];
             int j = 0;
           
             #region duplikaty
-            for (int i = 0; i < tab.Length-1; i++)
+            for (int i = 0; i < tablica.Length-1; i++)
             {
-                if(tab[i] != tab[i+1])
+                if(tablica[i] != tablica[i+1])
                 {
-                    temp[j++] = tab[i];
+                    temp[j++] = tablica[i];
                 }
             }
-            temp[j++] = tab[tab.Length - 1];
+            temp[j++] = tablica[tablica.Length - 1];
             #endregion
             foreach (var x in temp)
                 Console.Write($"{x} ");
         }
         static void Main()
         {
-            //int[] a = new int[] { 0, 1, 1, 2, 3, 3, 3 };
-            //int[] b = new int[] { 0, 1, 2, 3, 3 };
-            int[] a = new int[] { -2, -1, 0, 1, 4};
-            int[] b = new int[] { -3, -2, -1, 1, 2, 3};
-
-            //int[] a = new int[] { -2, -1, 0, 1, 4 };
-            //int[] b = new int[] { -2, -1, 0, 1, 4, 5, 6 };
+            int[] a = new int[] { -2, -1, 0, 1, 4 };
+            int[] b = new int[] { -3, -2, -1, 1, 2, 3 };
             Print(a, b);
+
+            Console.WriteLine();
+            a = new int[] { -2, -1, 0, 1, 4 };
+            b = new int[] { -2, -1, 0, 1, 4, 5, 6 };
+            Print(a, b);
+
+            Console.WriteLine();
+            a = new int[] { 1 };
+            b = new int[] { 1 };
+            Print(a, b);
+
+            Console.WriteLine();
+            a = new int[] { 1 };
+            b = new int[] { 2 };
+            Print(a, b);
+
+            Console.WriteLine();
+            a = new int[] { 1 };
+            b = new int[] { 1, 2 };
+            Print(a, b);
+
+            Console.WriteLine();
+            a = new int[] { 1 };
+            b = new int[] { 2, 3 };
+            Print(a, b);
+            
+            Console.WriteLine();
+            a = new int[] { 1,2 };
+            b = new int[] { 1 };
+            Print(a, b);
+
+            Console.WriteLine();
+            a = new int[] { 1,2 };
+            b = new int[] { 3 };
+            Print(a, b);
+
+            Console.WriteLine();
+            a = new int[] { 1,2,3 };
+            b = new int[] { 1,2,3 };
+            Print(a, b);
+
+            Console.WriteLine();
+            a = new int[] { 1, 2, 3 };
+            b = new int[] { -3, -2, -1 };
+            Print(a, b);
+
+            Console.WriteLine();
+            a = new int[] { 0, 1, 1, 2, 3, 3, 3 };
+            b = new int[] { 0, 1, 2, 3, 3 };
+            Print(a, b);
+
         }
     }
 
