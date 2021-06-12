@@ -39,3 +39,4 @@ inneZadanie16 : Wzorek Piramida
 inneZadanie17 : TrapesoidIsoscalesPerimeter
 inneZadanie18 : TetrahedronVolume
 inneZadanie19 : Odwrocona 7
+inneZadanie20 : RegularSquarePyramidVolume
