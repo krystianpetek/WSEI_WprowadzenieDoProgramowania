@@ -4,27 +4,15 @@ namespace Bank
 {
     class Account : IAccount
     {
-        public string Name
-        {
-            get;
-        }
+        protected const int PRECISION = 4;
+        public string Name { get; }
+        public decimal Balance { get; private set; }
+        public bool IsBlocked { get; private set; } = false;
 
-        public decimal Balance
-        {
-            get;
-            private set;
-        }
-
-        public bool IsBlocked
-        {
-            get; private set;
-        }
-
-
-        public void Block()
-        {
-            IsBlocked = true;
-        }
+        public void Unblock() { IsBlocked = false; }
+        // public void Unblock() => IsBlocked = false;
+        public void Block() { IsBlocked = true; }
+        //public void Block() => IsBlocked = false;
 
         public bool Deposit(decimal amount)
         {
@@ -34,13 +22,9 @@ namespace Bank
                 return false;
             else
             {
-                Balance = decimal.Round(Balance, 4) + decimal.Round(amount, 4);
+                Balance = decimal.Round(Balance, PRECISION) + decimal.Round(amount, PRECISION);
                 return true;
             }
-        }
-        public void Unblock()
-        {
-            IsBlocked = false;
         }
 
         public bool Withdrawal(decimal amount)
@@ -51,12 +35,11 @@ namespace Bank
                 return false;
             else if (IsBlocked)
                 return false;
-            else if (decimal.Round(amount, 4) > decimal.Round(Balance, 4))
-
+            else if (decimal.Round(amount, PRECISION) > decimal.Round(Balance, PRECISION))
                 return false;
             else
             {
-                Balance = decimal.Round(Balance, 4) - decimal.Round(amount, 4);
+                Balance = decimal.Round(Balance, PRECISION) - decimal.Round(amount, PRECISION);
                 return true;
             }
         }
@@ -65,22 +48,17 @@ namespace Bank
         {
             if (nazwa == null)
                 throw new ArgumentOutOfRangeException();
-
+            
             nazwa = nazwa.Trim();
-
             if (nazwa.Length > 2)
-            {
                 Name = nazwa;
-            }
             else
                 throw new ArgumentException();
 
             if (amount >= 0)
-                Balance = decimal.Round(amount, 4);
+                Balance = decimal.Round(amount, PRECISION);
             else
-            {
                 throw new ArgumentOutOfRangeException();
-            }
         }
 
         public override string ToString()
