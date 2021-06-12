@@ -15,7 +15,7 @@ namespace inneZadanie17
         /// <exception cref="ArgumentOutOfRangeException">z komunikatem "wrong arguments",
         /// gdy <c>precision</c> jest poza przedziałem od 2 do 8 lub którakolwiek z długości jest ujemna</exception>
         /// <exception cref="ArgumentException">z komunikatem "object not exist", gdy trapezu nie można utworzyć</exception>
-        public static double TrapesoidIsoscalesPerimeter(int base1, int base2, int leg, int precision = 2)
+        public static double TrapesoidIsoscelesPerimeter(int base1, int base2, int leg, int precision = 2)
         {
             if (precision < 2 || precision > 8)
                 throw new ArgumentOutOfRangeException("wrong arguments");
@@ -39,7 +39,7 @@ namespace inneZadanie17
             int base2 = int.Parse(Console.ReadLine());
             int leg = int.Parse(Console.ReadLine());
             int precision = int.Parse(Console.ReadLine());
-            Console.WriteLine(  TrapesoidIsoscalesPerimeter(base1, base2, leg, precision));
+            Console.WriteLine(  TrapesoidIsoscelesPerimeter(base1, base2, leg, precision));
         }
     }
 }
