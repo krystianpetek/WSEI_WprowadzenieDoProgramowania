@@ -28,7 +28,7 @@ inneZadanie8 : Wzorek
     ***
   *****
 *******
-inneZadanie9 : TriangleIsoscalesArea
+inneZadanie9 : TriangleIsoscelesArea
 inneZadanie10 : Wypisz te liczby z A, których nie ma w B
 inneZadanie11 : Średnia z tablicy postrzępiona
 inneZadanie12 : Odwrocona 3

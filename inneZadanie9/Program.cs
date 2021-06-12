@@ -15,7 +15,7 @@ namespace inneZadanie9
         ///     gdy <c>precision</c> jest poza przedziałem od 2 do 8 lub którakolwiek z długości jest ujemna</exception>    
         /// <exception cref="ArgumentException">z komunikatem "object not exist", gdy trójkąta nie można utworzyć</exception>
 
-        public static double TriangleIsoscalesArea(int basis, int leg, int precision = 2)
+        public static double TriangleIsoscelesArea(int basis, int leg, int precision = 2)
         {
             if (precision < 2 || precision > 8)
                 throw new ArgumentOutOfRangeException("wrong arguments");
