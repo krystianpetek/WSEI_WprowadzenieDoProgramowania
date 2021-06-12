@@ -9,6 +9,8 @@ namespace cwiczeniePhone
     public class Phone
     {
         private readonly string owner;
+        private readonly string phoneNumber;
+
         /// <summary>
         /// Property okreslające właściciela telefonu, read-only
         /// </summary>
@@ -24,7 +26,6 @@ namespace cwiczeniePhone
             }
         }
 
-        private readonly string phoneNumber;
         /// <summary>
         /// Property określające numer telefonu (nie null, dokładnie 9 cyfr), read-only
         /// </summary>
@@ -49,9 +50,7 @@ namespace cwiczeniePhone
 
                 }
                 else
-                {
                     throw new ArgumentException("Phone number is empty or null!");
-                }
             }
         }
 
@@ -65,7 +64,15 @@ namespace cwiczeniePhone
             if (number.Length != 9)
                 return false;
             else
-                return true;
+                try
+                {
+                    int.Parse(number);
+                    return true;
+                }
+                catch(Exception)
+                {
+                    return false;   
+                }
         }
 
         /// <summary>
@@ -77,7 +84,7 @@ namespace cwiczeniePhone
         }
 
         // Dictionary of <name, number>
-        private readonly Dictionary<string, string> phoneBook = new Dictionary<string, string>();
+        public readonly Dictionary<string, string> phoneBook = new Dictionary<string, string>();
 
         /// <summary>
         /// Tworzy obiekt typu Phone, w oparciu o podane parametry
@@ -108,10 +115,8 @@ namespace cwiczeniePhone
         {
             if (Count < PhoneBookCapacity)
             {
-                Console.WriteLine("dodaje " +name);
                 if (!IsCorrectPhoneNumber(number))
                 {
-                    Console.WriteLine("Nieprawidłowy numer");
                     return false;
                 }
 
@@ -120,7 +125,6 @@ namespace cwiczeniePhone
 
                     if (phoneBook.ContainsKey(name))
                     {
-                        Console.WriteLine("Duplikat");
                         return false;
                     }
                     phoneBook.Add(name, number);
@@ -155,10 +159,72 @@ namespace cwiczeniePhone
             }
             return wyjscie;
         }
-        public override string ToString()
+
+        public override string ToString() // ZADANIE 1
         {
             return $"Nazwa właściciela: {this.Owner}, numer telefonu: {this.phoneNumber}, ile miejsca: {PhoneBookCapacity - Count}";
         }
+
+        public bool RemoveContact(string name) // Zadanie 2
+        {
+            if (phoneBook.ContainsKey(name))
+            {
+                phoneBook.Remove(name);
+                return true;
+            }
+            else
+                return false;
+        }
+
+        public string FindPhoneNumber(string name) // Zadanie 3
+        {
+            if (phoneBook.ContainsKey(name))
+                return phoneBook[name];
+            else
+                return String.Empty;
+         }
+    
+        public List<string> FindOwners(string phoneNumber) // Zadanie 4
+        {
+            List<string> lista = new List<string>();
+
+            foreach (var x in phoneBook)
+            {
+                if (x.Value == phoneNumber)
+                    lista.Add(x.Key);
+            }
+
+            return lista;
+
+        }
+
+        public bool ChangePhoneNumber(string name, string phoneNumber) // Zadanie 5
+        {
+            if (phoneBook.ContainsKey(name))
+            {
+                if (IsCorrectPhoneNumber(phoneNumber))
+                {
+                    phoneBook[name] = phoneNumber;
+                    return true;
+                }
+                else
+                return false;
+            }
+            else
+                return false;
+        }
+
+
+        public void PrintPhoneBook() // Zadanie 6
+        {
+            List<string> lista = new List<string>(phoneBook.Keys);
+            for (int i = 0; i < phoneBook.Count; i++)
+            {
+                int z = i+1;
+                Console.WriteLine($"{z,-2} {lista[i],-10} {phoneBook[lista[i]]}");
+            }
+        }
+
 
     }
 }
