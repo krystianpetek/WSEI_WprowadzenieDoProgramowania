@@ -6,6 +6,16 @@ namespace Bank
     {
         static void Main(string[] args)
         {
+            try
+            {
+                var accou1nt = new Account(null, 100.0m);
+                Console.WriteLine(accou1nt);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                Console.WriteLine("Name is null");
+            }
+
             var account = new Account("John");
             account.Deposit(100.00m);
             Console.WriteLine(account.Withdrawal(10.00m));

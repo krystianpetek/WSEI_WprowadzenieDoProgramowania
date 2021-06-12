@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bank
 {
@@ -38,13 +34,8 @@ namespace Bank
                 return false;
             else
             {
-                if (decimal.Round(amount, 4) > decimal.Round(Balance, 4))
-                    {
-                    Balance += decimal.Round(amount, 4);
+                Balance = decimal.Round(Balance, 4) + decimal.Round(amount, 4);
                     return true;
-                }
-                else
-                    return false;
             }
         }
         public void Unblock()
@@ -54,7 +45,9 @@ namespace Bank
 
         public bool Withdrawal(decimal amount)
         {
-            if (Balance < 0)
+            if (amount <= 0)
+                return false;
+            else if (Balance < 0)
                 return false;
             else if (IsBlocked)
                 return false;
@@ -63,26 +56,39 @@ namespace Bank
                 return false;
             else
             {
-                Balance = Balance - decimal.Round(amount, 4);
+                Balance = decimal.Round(Balance, 4) - decimal.Round(amount, 4);
                 return true;
             }
         }
 
-        public Account(string nazwa)
+        public Account(string nazwa, decimal amount = 0)
         {
+            if (nazwa == null)
+                throw new ArgumentOutOfRangeException();
+            
             nazwa = nazwa.Trim();
-            if(nazwa.Length > 2)
-            Name = nazwa;
+            
+            if (nazwa.Length > 2)
+            {
+                Name = nazwa;
+            } 
+            else
+                throw new ArgumentException();
 
-            Balance = 0;
+            if(amount >= 0)
+            Balance = decimal.Round(amount, 4);
+            else
+            {
+                throw new ArgumentOutOfRangeException();
+            }
         }
 
         public override string ToString()
         {
             if (IsBlocked)
-                return $"Account name: {Name}, balance: {Balance}, blocked";
+                return $"Account name: {Name}, balance: {decimal.Round(Balance, 2):F2}, blocked";
             else
-                return $"Account name: { Name}, balance: { Balance}";
+                return $"Account name: {Name}, balance: {decimal.Round(Balance,2):F2}";
         }
     }
 
