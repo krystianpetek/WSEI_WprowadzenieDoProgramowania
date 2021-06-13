@@ -44,19 +44,19 @@ namespace Bank
             }
         }
 
-        public Account(string nazwa, decimal amount = 0)
+        public Account(string name, decimal initialBalance = 0)
         {
-            if (nazwa == null)
+            if (name == null)
                 throw new ArgumentOutOfRangeException();
-            
-            nazwa = nazwa.Trim();
-            if (nazwa.Length > 2)
-                Name = nazwa;
+
+            name = name.Trim();
+            if (name.Length > 2)
+                Name = name;
             else
                 throw new ArgumentException();
 
-            if (amount >= 0)
-                Balance = decimal.Round(amount, PRECISION);
+            if (initialBalance >= 0)
+                Balance = decimal.Round(initialBalance, PRECISION);
             else
                 throw new ArgumentOutOfRangeException();
         }

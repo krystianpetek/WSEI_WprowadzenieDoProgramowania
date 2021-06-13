@@ -6,28 +6,23 @@ namespace Bank
     {
         static void Main(string[] args)
         {
-            try
-            {
-                var accou1nt = new Account(null, 100.0m);
-                Console.WriteLine(accou1nt);
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                Console.WriteLine("Name is null");
-            }
+            // sytuacje specjalne
+            // konto z zerowym stanem
+            var account = new AccountPlus("John", initialBalance: 0, initialLimit: 0);
+            Console.WriteLine(account);
+            account.Withdrawal(10);
+            Console.WriteLine(account);
 
-            var account = new Account("John");
-            account.Deposit(100.00m);
-            Console.WriteLine(account.Withdrawal(10.00m));
+            // zerowe saldo, limit 50
+            account.OneTimeDebetLimit = 50;
             Console.WriteLine(account);
-            Console.WriteLine(account.Withdrawal(100.00m));
+            account.Withdrawal(0); // zerowa wypłata
             Console.WriteLine(account);
-            Console.WriteLine(account.Withdrawal(0.00m));
+            account.Withdrawal(10); // wypłata w ramach debetu
             Console.WriteLine(account);
-            Console.WriteLine(account.Withdrawal(-10.00m));
+            account.Unblock(); // próba odblokowania konta
             Console.WriteLine(account);
-            account.Block();
-            Console.WriteLine(account.Withdrawal(10.4999m));
+            account.Deposit(10); // likwidacja debetu, zerowy bilans
             Console.WriteLine(account);
         }
     }
