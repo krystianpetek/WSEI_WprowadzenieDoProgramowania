@@ -22,9 +22,16 @@ namespace cwiczenieTrojkat
             //nowy.Obwod();
             //nowy.SprawdzTrojkat();
 
-            Trojkat t = new Trojkat(2, 3, 4);
-            Console.WriteLine(t);
+            Console.Write("Podaj długość A: ");
+            double A = double.Parse(Console.ReadLine());
+            Console.Write("Podaj długość B: ");
+            double B = double.Parse(Console.ReadLine());
+            Console.Write("Podaj długość C: ");
+            double C = double.Parse(Console.ReadLine());
 
+            Trojkat t = new Trojkat(A, B, C);
+            Console.WriteLine(t);
+            
         }
     }
 }
