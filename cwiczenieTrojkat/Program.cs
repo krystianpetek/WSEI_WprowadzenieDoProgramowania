@@ -30,8 +30,7 @@ namespace cwiczenieTrojkat
             double C = double.Parse(Console.ReadLine());
 
             Trojkat t = new Trojkat(A, B, C);
-            Console.WriteLine(t);
-            
+            Console.WriteLine(t);            
         }
     }
 }
