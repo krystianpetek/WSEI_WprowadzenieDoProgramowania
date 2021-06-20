@@ -32,50 +32,104 @@ namespace cwiczeniePhoneMenu
             List<string> lista = new List<string> { "Zmień wielkość książki telefonicznej", "Zmień wielkość rejestru połączeń", "Przejdź dalej" };
 
             bool warunek = true;
-            while(warunek)
+            while (warunek)
             {
                 for (int i = 0; i < lista.Count; i++)
                 {
-                    Console.WriteLine($"{i+1}. {lista[i]}");
+                    Console.WriteLine($"{i + 1}. {lista[i]}");
                 }
-                
-                if (uzytkownik.PhoneBookCapacity == 100)
-                {
 
-                }
-                if(uzytkownik.HistoriaPolaczenCapacity == 100)
-                    {
-
-                    }
                 var znak = Console.ReadKey();
 
-                switch(znak.Key)
+                switch (znak.Key)
                 {
                     case ConsoleKey.Escape:
                         {
-                            continue;
+                            warunek = false;
+
+                            break;
                         }
                     case ConsoleKey.D1:
                     case ConsoleKey.NumPad1:
-
                         {
-
+                            Console.Clear();
+                            Console.WriteLine("Podaj wielkość książki telefonicznej");
+                            uzytkownik.PhoneBookCapacity = int.Parse(Console.ReadLine());
                             break;
                         }
                     case ConsoleKey.D2:
                     case ConsoleKey.NumPad2:
                         {
+                            Console.Clear();
+                            Console.WriteLine("Podaj wielkość rejestru połączeń");
+                            uzytkownik.HistoriaPolaczenCapacity = int.Parse(Console.ReadLine());
                             break;
                         }
                     case ConsoleKey.D3:
                     case ConsoleKey.NumPad3:
                         {
-                            warunek = false;   
+                            warunek = false;
+                            break;
+                        }
+                }
+
+
+            }
+            Console.Clear();
+            warunek = true;
+            lista = new List<string> { "Dodaj kontakt", "Usuń kontakt", "Zmień numer kontaktu" };
+                Console.Write($"Witaj ");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write($"{uzytkownik.Owner}");
+                Console.ResetColor();
+                Console.WriteLine($" w symulatorze telefonu");
+                Console.Write($"Twój numer telefonu to: ");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write($"{uzytkownik.PhoneNumber}");
+                Console.ResetColor();
+            Console.WriteLine();
+
+            while (warunek)
+            {
+                for (int i = 0; i < lista.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1}. {lista[i]}");
+                }
+
+                var znak = Console.ReadKey();
+                switch (znak.Key)
+                {
+                    case ConsoleKey.Escape:
+                        {
+                            warunek = false;
+                            break;
+                        }
+                    case ConsoleKey.D1:
+                    case ConsoleKey.NumPad1:
+                        {
+                            Console.WriteLine("Podaj imię");
+                            var name = Console.ReadLine();
+                            Console.WriteLine("Podaj numer");
+                            var tel = Console.ReadLine();
+                            Console.WriteLine( uzytkownik.AddContact(name, tel));
+                            break;
+                        }
+                    case ConsoleKey.D2:
+                    case ConsoleKey.NumPad2:
+                        {
+
+                            uzytkownik.HistoriaPolaczenCapacity = int.Parse(Console.ReadLine());
+                            break;
+                        }
+                    case ConsoleKey.D3:
+                    case ConsoleKey.NumPad3:
+                        {
+                            warunek = false;
                             break;
                         }
                 }
             }
-            
+
         }
     }
 }
