@@ -77,7 +77,9 @@ namespace cwiczeniePhoneMenu
             }
             Console.Clear();
             warunek = true;
-            lista = new List<string> { "Dodaj kontakt", "Usuń kontakt", "Zmień numer kontaktu" };
+            lista = new List<string> { "Zadzwoń", "Dodaj kontakt", "Usuń kontakt", "Zmień numer kontaktu", "Wyświetl wszystkie kontakty", "Wyświetl historie połączeń" };
+                
+                Console.Clear();
                 Console.Write($"Witaj ");
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write($"{uzytkownik.Owner}");
@@ -87,8 +89,8 @@ namespace cwiczeniePhoneMenu
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write($"{uzytkownik.PhoneNumber}");
                 Console.ResetColor();
-            Console.WriteLine();
-
+                Console.WriteLine();
+            int Menu = 0;
             while (warunek)
             {
                 for (int i = 0; i < lista.Count; i++)
@@ -97,37 +99,43 @@ namespace cwiczeniePhoneMenu
                 }
 
                 var znak = Console.ReadKey();
-                switch (znak.Key)
+                switch(znak)
                 {
-                    case ConsoleKey.Escape:
-                        {
-                            warunek = false;
-                            break;
-                        }
-                    case ConsoleKey.D1:
-                    case ConsoleKey.NumPad1:
-                        {
-                            Console.WriteLine("Podaj imię");
-                            var name = Console.ReadLine();
-                            Console.WriteLine("Podaj numer");
-                            var tel = Console.ReadLine();
-                            Console.WriteLine( uzytkownik.AddContact(name, tel));
-                            break;
-                        }
-                    case ConsoleKey.D2:
-                    case ConsoleKey.NumPad2:
-                        {
 
-                            uzytkownik.HistoriaPolaczenCapacity = int.Parse(Console.ReadLine());
-                            break;
-                        }
-                    case ConsoleKey.D3:
-                    case ConsoleKey.NumPad3:
-                        {
-                            warunek = false;
-                            break;
-                        }
                 }
+
+
+                //switch (znak.Key)
+                //{
+                //    case ConsoleKey.Escape:
+                //        {
+                //            warunek = false;
+                //            break;
+                //        }
+                //    case ConsoleKey.D1:
+                //    case ConsoleKey.NumPad1:
+                //        {
+                //            Console.WriteLine("Do kogo chcesz zadzwonić?");
+                //            if(uzytkownik.phoneBook.Count == 0)
+                //                Console.WriteLine("\nNie masz żadnego kontaktu");
+                //            Console.ReadKey();
+                //            Console.Clear();
+                //            break;
+                //        }
+                //    case ConsoleKey.D2:
+                //    case ConsoleKey.NumPad2:
+                //        {
+
+                //            uzytkownik.HistoriaPolaczenCapacity = int.Parse(Console.ReadLine());
+                //            break;
+                //        }
+                //    case ConsoleKey.D3:
+                //    case ConsoleKey.NumPad3:
+                //        {
+                //            warunek = false;
+                //            break;
+                //        }
+                //}
             }
 
         }
