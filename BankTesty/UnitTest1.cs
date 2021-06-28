@@ -23,11 +23,8 @@ namespace BankTesty
             decimal bilans = 1000;
             decimal wyplata = 123;
             decimal mamOtrzymac = 877;
-
             var konto = new Konto("Krystian", bilans);
-
             konto.Wyplata(wyplata);
-
             Assert.AreEqual(mamOtrzymac, konto.BilansKonta);
         }
     }
