@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "zadanieUproszczonyStosGener
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SprawdzianProbnyZadanie1", "SprawdzianProbnyZadanie1\SprawdzianProbnyZadanie1.csproj", "{CD66143B-6B8C-46F8-9533-8376BCD59A0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SprawdzianProbnyZadanie2", "SprawdzianProbnyZadanie2\SprawdzianProbnyZadanie2.csproj", "{9F33B3B0-EFA0-489E-A879-6BBDD219CB32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CD66143B-6B8C-46F8-9533-8376BCD59A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD66143B-6B8C-46F8-9533-8376BCD59A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD66143B-6B8C-46F8-9533-8376BCD59A0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F33B3B0-EFA0-489E-A879-6BBDD219CB32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F33B3B0-EFA0-489E-A879-6BBDD219CB32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F33B3B0-EFA0-489E-A879-6BBDD219CB32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F33B3B0-EFA0-489E-A879-6BBDD219CB32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
