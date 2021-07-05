@@ -11,6 +11,9 @@ namespace FiguryTest
     {
         static void Main()
         {
+
+            // POINT
+
             Console.WriteLine("== default constructor ==");
             Point P0 = new Point();
             Console.WriteLine(P0);
@@ -36,6 +39,27 @@ namespace FiguryTest
             P3.Draw();
 
             Console.WriteLine("P1 equals P3: " + (P1 == P3));
+
+            Console.WriteLine();
+            // LINE SEGMENT
+            LineSegment s1 = new LineSegment();
+            Console.WriteLine(s1);
+            s1.Draw();
+
+            LineSegment s2 = new LineSegment(new Point(1, 2), new Point(2, 3));
+            s2.Draw();
+            LineSegment s3 = new LineSegment(new Point(1, 2), new Point(2, 3));
+            s3.Draw();
+            LineSegment s4 = new LineSegment(new Point(2, 3), new Point(1, 2));
+            s4.Draw();
+            Console.WriteLine(s2 == s3);
+            Console.WriteLine(s2 == s4);
+
+            Console.WriteLine();
+            // CIRCLE
+            Circle c1 = new Circle();
+            Console.WriteLine(c1);
+            c1.Draw();
         }
     }
 }

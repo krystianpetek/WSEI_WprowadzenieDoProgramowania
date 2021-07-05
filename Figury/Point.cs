@@ -15,14 +15,11 @@ namespace Figury
             this.Y = Math.Round(y, Figure.FRACTIONAL_DIGITS);
             Color = Color.Blue;
         }
-
-        // public override string ToString() => $"Point({X},{Y})";
-
+        public override string ToString() => $"Point({X},{Y})";
         public override void Draw()
         {
-            Console.WriteLine("drawing: " + $"Point({this.X}, {this.Y}), {Color}");
+            Console.WriteLine("drawing: " + $"{this} ({this.X}, {this.Y}), {Color}");
         }
-
         #region implementation of IEquatable<Point>
         // https://docs.microsoft.com/en-us/dotnet/api/system.object.equals?view=netstandard-2.0
         public bool Equals(Point other) => (other is null) ? false : (this.X == other.X && this.Y == other.Y);
@@ -31,7 +28,6 @@ namespace Figury
             if (!this.GetType().Equals(obj.GetType())) return false;
             return this.Equals((Point)obj);
         }
-        public override int GetHashCode() => unchecked(((int)X << 2) ^ (int)Y);
         static public bool operator ==(Point p1, Point p2)
         {
             if (p1 is null && p2 is null) return true;
@@ -40,6 +36,7 @@ namespace Figury
             return p1.Equals(p2);
         }
         static public bool operator !=(Point p1, Point p2) => !(p1 == p2);
+        public override int GetHashCode() => unchecked( ((int) X << 2) ^ (int) Y );
         #endregion
     }
 }
