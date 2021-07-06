@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Figury
 {
-    public class Circle : Figure, IMeasurable1D
+    public class Circle : Figure, IMeasurable1D, IMoveable
     {
         public Point Srodek;
         private double promien;
@@ -39,6 +39,6 @@ namespace Figury
             if (other is null) return false;
             return (this.Promien == other.Promien && this.Srodek == other.Srodek);
         }
-
+        
     }
 }

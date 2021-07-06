@@ -4,16 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Figury
+namespace MinimalnyProstokatOtaczajacy
 {
-    public struct Vector
+    public class Punkt
     {
         public readonly double X;
         public readonly double Y;
-        public Vector(double x, double y)
+        public Punkt(double x, double y)
         {
             this.X = x;
             this.Y = y;
+        }
+        public Punkt() : this(0, 0)
+        {
+
         }
     }
 }
