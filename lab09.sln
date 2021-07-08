@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bank2", "Bank2\Bank2.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KontoWBanku", "KontoWBanku\KontoWBanku.csproj", "{1E6575F7-FF65-43F2-8AAF-F90905D0ADFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankTesty", "BankTesty\BankTesty.csproj", "{B0543CCA-3A51-4F82-8C11-EB5FBF9D1769}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankTesty", "BankTesty\BankTesty.csproj", "{B0543CCA-3A51-4F82-8C11-EB5FBF9D1769}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZwiazkiKlas", "ZwiazkiKlas\ZwiazkiKlas.csproj", "{B4301EC7-FBE7-40C9-BB11-39483743CC1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{B0543CCA-3A51-4F82-8C11-EB5FBF9D1769}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0543CCA-3A51-4F82-8C11-EB5FBF9D1769}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0543CCA-3A51-4F82-8C11-EB5FBF9D1769}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4301EC7-FBE7-40C9-BB11-39483743CC1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4301EC7-FBE7-40C9-BB11-39483743CC1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4301EC7-FBE7-40C9-BB11-39483743CC1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4301EC7-FBE7-40C9-BB11-39483743CC1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
