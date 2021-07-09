@@ -9,25 +9,6 @@ namespace ZwiazkiKlas
     {
         public Owner Owner { get; set; } = null;
 
-        private CarTrailer carTrailer = null;
-        public CarTrailer Trailer
-        {
-            get => carTrailer;
-            set
-            {
-                if (value is null)
-                { carTrailer.Disconnect();
-                    return;
-            }
-                if(value.ConnectedTo == null)
-                {
-                    carTrailer = value;
-                    value.ConnectTo(this);
-                }
-            }
-            
-        }
-
         public override void Drive()
         {
             engine.TurnOn();
@@ -53,7 +34,24 @@ namespace ZwiazkiKlas
 
             }
         }
-
+        private CarTrailer carTrailer;
+        public CarTrailer Trailer
+        {
+            get => carTrailer;
+            set
+            {
+                if (value is null)
+                {
+                    carTrailer.Disconnect();
+                    return;
+                }
+                if (value.ConnectedTo == null)
+                {
+                    carTrailer = value;
+                    value.ConnectTo(this);
+                }
+            }
+        }
     }
-    
 }
+
