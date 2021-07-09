@@ -1,44 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ZwiazkiKlas.Vehicle">
-    <Position X="3.75" Y="1" Width="1.5" />
+    <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAIAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAgAAAIAAAAAAAAAA=</HashCode>
       <FileName>Vehicle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ZwiazkiKlas.Car">
-    <Position X="3.75" Y="3" Width="1.5" />
+    <Position X="6" Y="3" Width="1.5" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
-    <NestedTypes>
-      <Class Name="ZwiazkiKlas.Car.Engine">
-        <TypeIdentifier>
-          <NewMemberFileName>Car.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAAAAEAAgCAAAAAAAAgAAAIAAAAAQAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAgCAAAAAAAAgAAAIAAEAAQAAAA=</HashCode>
       <FileName>Car.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Owner" />
       <Property Name="Trailer" />
     </ShowAsAssociation>
+    <Lollipop Position="0.1" />
   </Class>
   <Class Name="ZwiazkiKlas.Person">
-    <Position X="6.25" Y="1" Width="1.5" />
+    <Position X="9" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Person.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ZwiazkiKlas.Owner">
-    <Position X="6.25" Y="3.25" Width="1.5" />
+    <Position X="8.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAgAEQAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAAAAEQAAAAAAAAAAAAAAAAAAAAAgEAAA=</HashCode>
       <FileName>Owner.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -49,5 +42,42 @@
       <FileName>CarTrailer.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="ZwiazkiKlas.Engine">
+    <Position X="11" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAA=</HashCode>
+      <FileName>Engine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZwiazkiKlas.Bicycle">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAgAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Bicycle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZwiazkiKlas.ElectricBicycle">
+    <Position X="3.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAgAAAIAAEAAAAAAA=</HashCode>
+      <FileName>ElectricBicycle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZwiazkiKlas.Drone">
+    <Position X="3" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAIAAEAAAAAAA=</HashCode>
+      <FileName>Drone.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ZwiazkiKlas.IWithEngine">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>IWithEngine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -7,35 +7,35 @@ namespace ZwiazkiKlas
 {
     public class Owner : Person
     {
-        private List<Car> cars;
+        public List<Vehicle> pojazdy;
         public Owner(string name) : base(name)
         {
-            cars = new List<Car>();
+            pojazdy = new List<Vehicle>();
         }
 
         public new void Print()
         {
             base.Print();
-            if (cars.Count == 0)
+            if (pojazdy.Count == 0)
                 Console.WriteLine("brak pojazdów");
             else
-                Console.WriteLine(String.Join(",", cars));
+                Console.WriteLine(String.Join(",\n", pojazdy));
         }
-        public override string ToString() => $"{Name}: {String.Join(",",cars)}";
+        public override string ToString() => $"{Name}: {String.Join(",",pojazdy)}";
 
-        public void Buy(Car car)
+        public void Buy(Vehicle car)
         {
             if (car == null) return;
 
-            if (!cars.Contains(car))
-                cars.Add(car);
+            if (!pojazdy.Contains(car))
+                pojazdy.Add(car);
 
             car.Owner = this;
         }
-        public void Sell(Car car)
+        public void Sell(Vehicle car)
         {
             if (car is null) return;
-            if (cars.Contains(car)) cars.Remove(car);
+            if (pojazdy.Contains(car)) pojazdy.Remove(car);
             car.Owner = null;
         }
 

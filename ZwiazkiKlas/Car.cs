@@ -5,10 +5,8 @@ using System.Text;
 
 namespace ZwiazkiKlas
 {
-    public class Car : Vehicle
+    public class Car : Vehicle, IWithEngine
     {
-        public Owner Owner { get; set; } = null;
-
         public override void Drive()
         {
             engine.TurnOn();
@@ -20,20 +18,12 @@ namespace ZwiazkiKlas
             //....
             engine.TurnOff();
         }
-        public override string ToString() => this.Owner.Name + " " + this.Trailer;
+        public override string ToString() => "Car: " + this.GetHashCode().ToString();
+
+        public Engine GetEngine() => engine;
 
         private Engine engine = new Engine();
-        private class Engine
-        {
-            internal void TurnOn()
-            {
-
-            }
-            internal void TurnOff()
-            {
-
-            }
-        }
+        
         private CarTrailer carTrailer;
         public CarTrailer Trailer
         {

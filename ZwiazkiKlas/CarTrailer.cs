@@ -8,8 +8,8 @@ namespace ZwiazkiKlas
     public class CarTrailer
     {
 
-        public Car ConnectedTo { get; private set; }
-        public bool ConnectTo(Car car)
+        public Vehicle ConnectedTo { get; private set; }
+        public bool ConnectTo(Vehicle car)
         {
             if (ConnectedTo != null) return false;
 
