@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MinimalnyProstokatOtaczajacy
 {
-    class Prostokat
+    class Prostokat : IFigura
     {
         public Punkt P1, P2, P3, P4;
         public Prostokat(Punkt p1,Punkt p2, Punkt p3, Punkt p4)
@@ -18,6 +18,12 @@ namespace MinimalnyProstokatOtaczajacy
         }
         public Prostokat(): this(new Punkt(0, 0), new Punkt(0, 0), new Punkt(0,0),new Punkt(0,0))
         {
+            
+        }
+
+        public Prostokat GetBoundingRectangle()
+        {
+            throw new NotImplementedException();
         }
     }
 }

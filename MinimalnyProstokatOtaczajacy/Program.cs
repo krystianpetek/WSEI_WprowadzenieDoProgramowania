@@ -1,9 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace MinimalnyProstokatOtaczajacy
 {
-    class Program
+    public class Program
     {
+        Prostokat MinimumBoundingRectangle(IList<IFigura> listaFigur)
+        {
+
+        }
+
         static void Main(string[] args)
         {
             var p1 = new Punkt(3, 3);

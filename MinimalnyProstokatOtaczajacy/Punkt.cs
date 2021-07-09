@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MinimalnyProstokatOtaczajacy
 {
-    public class Punkt
+    public class Punkt : IFigura
     {
         public readonly double X;
         public readonly double Y;
@@ -18,6 +18,11 @@ namespace MinimalnyProstokatOtaczajacy
         public Punkt() : this(0, 0)
         {
 
+        }
+
+        public Prostokat GetBoundingRectangle()
+        {
+            throw new NotImplementedException();
         }
     }
 }

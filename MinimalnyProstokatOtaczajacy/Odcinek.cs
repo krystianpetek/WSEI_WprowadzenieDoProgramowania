@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MinimalnyProstokatOtaczajacy
 {
-    public class Odcinek
+    public class Odcinek : IFigura
     {
         private Punkt A;
 
@@ -32,6 +32,16 @@ namespace MinimalnyProstokatOtaczajacy
         public Odcinek() : this(new Punkt(0, 0), new Punkt(0, 0))
         {
 
+        }
+
+        public static implicit operator Odcinek(void v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Prostokat GetBoundingRectangle()
+        {
+            throw new NotImplementedException();
         }
     }
 }

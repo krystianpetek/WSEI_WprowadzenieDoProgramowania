@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MinimalnyProstokatOtaczajacy
 {
 
-    public class Kolo
+    public class Kolo : IFigura
     {
         private Punkt srodek;
         public Punkt SRODEK
@@ -31,6 +31,11 @@ namespace MinimalnyProstokatOtaczajacy
         public Kolo() :this(new Punkt(0,0),1)
         {
 
+        }
+
+        public Prostokat GetBoundingRectangle()
+        {
+            throw new NotImplementedException();
         }
     }
 }
