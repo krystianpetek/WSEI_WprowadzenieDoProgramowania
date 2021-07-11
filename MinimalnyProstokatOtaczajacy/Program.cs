@@ -95,6 +95,7 @@ namespace MinimalnyProstokatOtaczajacy
             string poprzedniWynik = string.Empty;
             string[] M, N;
             string koniec = "" ;
+
             foreach (var x in listaFigur)
             {
                 wynik = "";
@@ -103,26 +104,43 @@ namespace MinimalnyProstokatOtaczajacy
                 wynik += z[1].Split(",")[1] + " ";
                 wynik += z[2].Split(",")[0] + " ";
                 wynik += z[2].Split(",")[1];
-            }
-            if (poprzedniWynik == "" || poprzedniWynik == null)
-            {
-                poprzedniWynik = wynik; 
-            }
-            else { 
-                M = poprzedniWynik.Split(" ");
-                    N = wynik.Split(" ");
-                for (int T = 0; T < 4; T++)
-                {
-                    if (int.Parse(N[T]) > int.Parse(M[T]))
-                        koniec += N[T];
-                    else
-                    {
-                        koniec += M[T];
-                    }
-                        
 
+                if (poprzedniWynik != "")
+                {
+                    M = poprzedniWynik.Split(" ");
+                    N = wynik.Split(" ");
+
+                    if (int.Parse(N[0]) < int.Parse(M[0]))
+                        koniec += N[0];
+                    else
+                        koniec += M[0];
+                    koniec += " ";
+                    if (int.Parse(N[1]) < int.Parse(M[1]))
+                        koniec += N[1];
+                    else
+                        koniec += M[1];
+                    koniec += " ";
+
+                    if (int.Parse(M[2]) > int.Parse(N[2]))
+                        koniec += M[2];
+                    else
+                        koniec += N[2];
+                    koniec += " ";
+                    if (int.Parse(M[3]) > int.Parse(N[3]))
+                        koniec += M[3];
+                    else
+                        koniec += N[3]; 
+                    
+                    
+                    poprzedniWynik = koniec;
                 }
-                poprzedniWynik = koniec;
+                else
+                {
+                    poprzedniWynik = wynik;
+                    
+                }
+
+                
             }
             Console.WriteLine(poprzedniWynik);
         }
