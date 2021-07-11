@@ -20,7 +20,10 @@ namespace MinimalnyProstokatOtaczajacy
         public double PROMIEN
         {
             get { return promien; }
-            set { promien = value; }
+            set { if (value > 0)
+                    promien = value;
+                else promien = 1;
+            }
         }
 
         public Kolo(Punkt srodek, double promien)
@@ -28,14 +31,20 @@ namespace MinimalnyProstokatOtaczajacy
             SRODEK = srodek;
             PROMIEN = promien;
         }
-        public Kolo() :this(new Punkt(0,0),1)
+        public Kolo() : this(new Punkt(0,0),1)
         {
 
         }
-
+        public override string ToString() => $"Koło S:{SRODEK.X},{SRODEK.Y} R:{PROMIEN}";
         public Prostokat GetBoundingRectangle()
         {
-            throw new NotImplementedException();
+            var koloX = SRODEK.X;
+            var koloY = SRODEK.Y;
+            Punkt LG = new Punkt(koloX - PROMIEN, koloY + PROMIEN);
+            Punkt PG = new Punkt(koloX + PROMIEN, koloY + PROMIEN);
+            Punkt LD = new Punkt(koloX - PROMIEN, koloY - PROMIEN);
+            Punkt PD = new Punkt(koloX + PROMIEN, koloY - PROMIEN);
+            return new Prostokat(LG, PG, LD, PD);
         }
     }
 }

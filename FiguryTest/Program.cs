@@ -91,7 +91,7 @@ namespace FiguryTest
 
             Console.WriteLine("\n==================================\n");
             var trojkat = new Triangle(new Point(1, 1), new Point(5, 1), new Point( 4,4));
-            Console.WriteLine( trojkat.Length);
+            trojkat.Draw();
         }
     }
 }

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace MinimalnyProstokatOtaczajacy
 {
-    interface IFigura
+    public interface IFigura
     {
-        public Prostokat GetBoundingRectangle();
+        Prostokat GetBoundingRectangle();
     }
 }
