@@ -90,7 +90,41 @@ namespace MinimalnyProstokatOtaczajacy
         }
         public static void MinimumBoundingRectangle(IList<IFigura> listaFigur)
         {
-            string[] z;
+            int lewyDolX=0, lewyDolY=0;
+            int prawaGoraX=0, prawaGoraY=0;
+            int nowyLewyDolX=0, nowyLewyDolY=0;
+            int nowaPrawaGoraX=0, nowaPrawaGoraY=0;
+            for (int i = 0; i < listaFigur.Count; i++)
+            {
+                var x = listaFigur[i];
+                nowyLewyDolX = int.Parse(x.ToString().Split(" ")[1].Split(",")[0]);
+                nowyLewyDolY = int.Parse(x.ToString().Split(" ")[1].Split(",")[1]);
+                nowaPrawaGoraX = int.Parse(x.ToString().Split(" ")[2].Split(",")[0]);
+                nowaPrawaGoraY = int.Parse(x.ToString().Split(" ")[2].Split(",")[1]);
+                
+                if(i == 0)
+                {
+                    lewyDolX = nowyLewyDolX;
+                    lewyDolY = nowyLewyDolY;
+                    prawaGoraX= nowaPrawaGoraX;
+                    prawaGoraY = nowaPrawaGoraY;
+                }
+
+                if (nowyLewyDolX < lewyDolX)
+                    lewyDolX = nowyLewyDolX;
+
+                if (nowyLewyDolY < lewyDolY)
+                    lewyDolY = nowyLewyDolY;
+
+                if (nowaPrawaGoraX > prawaGoraX)
+                    prawaGoraX = nowaPrawaGoraX; 
+
+                if (nowaPrawaGoraY> prawaGoraY)
+                    prawaGoraY= nowaPrawaGoraY;
+
+            }
+                Console.WriteLine($"{lewyDolX} {lewyDolY} {prawaGoraX} {prawaGoraY}");
+            /*string[] z;
             string wynik ="";
             string poprzedniWynik = string.Empty;
             string[] M, N;
@@ -98,6 +132,10 @@ namespace MinimalnyProstokatOtaczajacy
 
             foreach (var x in listaFigur)
             {
+                Console.WriteLine();
+                Console.WriteLine(x);
+                Console.WriteLine();
+
                 wynik = "";
                 z = x.ToString().Split(" ");
                 wynik += z[1].Split(",")[0] +" ";
@@ -143,6 +181,7 @@ namespace MinimalnyProstokatOtaczajacy
                 
             }
             Console.WriteLine(poprzedniWynik);
+            */
         }
 
     }
