@@ -46,6 +46,29 @@ namespace FiguryTest
             var linia2 = new LineSegment(new Point(2, 2), new Point(0, 0));
             Console.WriteLine(linia2);
             Console.WriteLine(linia == linia2);
+            
+            // CIRCLE
+            Console.WriteLine();
+            var okrag = new Circle();
+            okrag.Srodek = new Point(2, 5);
+            okrag.Promien = 3;
+            okrag.Draw();
+            var okrag2 = new Circle(new Point(2, 5), 1);
+            Console.WriteLine(okrag2 == okrag);
+            okrag2.Promien = 3;
+            Console.WriteLine(okrag == okrag2);
+
+            //WHEEL
+            Console.WriteLine(); 
+            var kolo = new Wheel();
+            kolo.Srodek = new Point(5, 4);
+            kolo.Promien = 2.5;
+            kolo.Draw();
+            var kolo2 = new Wheel(new Point(5, 4), 2.5);
+            kolo2.Draw();
+            Console.WriteLine(kolo == kolo2);
+
+
         }
 
     }

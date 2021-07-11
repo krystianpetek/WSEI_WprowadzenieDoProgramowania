@@ -20,7 +20,7 @@ namespace Figury
                 promien = Math.Round(value, Figure.FRACTIONAL_DIGITS);
             }
         }
-        public double Length => 2 * Math.PI * Promien;
+        public double Length => Math.Round(2 * Math.PI * Promien,2);
         public Circle(Point punkt, double r)
         {
             this.Srodek = punkt;
@@ -39,6 +39,18 @@ namespace Figury
             if (other is null) return false;
             return (this.Promien == other.Promien && this.Srodek == other.Srodek);
         }
-        
+        static public bool operator ==(Circle c1, Circle c2)
+        {
+            if (c1 is null && c2 is null) return true;
+            if (c1 is null && !(c2 is null)) return false;
+
+            return c1.Equals(c2);
+        }
+        static public bool operator !=(Circle c1, Circle c2) => !(c1 == c2);
+
+        public void Move(Vector v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

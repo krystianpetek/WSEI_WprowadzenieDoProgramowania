@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Figury
 {
-    public class LineSegment : Figure, IEquatable<LineSegment>, IMeasurable1D
+    public class LineSegment : Figure, IEquatable<LineSegment>, IMeasurable1D, IMoveable
     {
         public Point StartPoint;
         public Point EndPoint;
-        public LineSegment() : this(new Point(), new Point()) { }
+        public LineSegment() : this(new Point(0,0), new Point(0,0)) { }
 
         public LineSegment(Point p1, Point p2) {
             this.StartPoint = p1;
@@ -43,5 +43,10 @@ namespace Figury
         }
         public static bool operator !=(LineSegment s1, LineSegment s2) => !(s1 == s2);
         #endregion
+
+        public void Move(Vector v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

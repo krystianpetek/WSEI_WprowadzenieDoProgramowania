@@ -8,8 +8,6 @@ namespace Figury
 {
     interface IMoveable
     {
-        void Move (Vector v)
-        {
-        }
+        public void Move(Vector v);
     }
 }

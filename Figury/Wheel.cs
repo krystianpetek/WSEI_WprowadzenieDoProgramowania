@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Figury
 {
-    class Wheel : Circle, IMeasurable2D
+    public class Wheel : Circle
     {
-        public Wheel() : this(new Point(0, 0), 1)
+        public Wheel() : this(new Point(), 1)
         {
         }
         public Wheel(Point punkt, double r) : base(punkt, r)
@@ -17,9 +17,9 @@ namespace Figury
             this.Promien = r;
             this.Srodek = punkt;
         }
-        public double Circumference => Length;
+        public double Circumference => Math.Round(Length, 2);
 
-        public double Surface => Math.Round(Math.PI * Math.Pow(Promien,2), FRACTIONAL_DIGITS);
+        public double Surface => Math.Round(Math.PI * Math.Pow(Promien,2),2);
 
         public override void Draw()
         {
