@@ -88,6 +88,10 @@ namespace FiguryTest
             linia2.Draw();
             linia2.Move(vector2);
             linia2.Draw();
+
+            Console.WriteLine("\n==================================\n");
+            var trojkat = new Triangle(new Point(1, 1), new Point(5, 1), new Point( 4,4));
+            Console.WriteLine( trojkat.Length);
         }
     }
 }
