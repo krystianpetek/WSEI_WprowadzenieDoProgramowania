@@ -1,6 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace FiguryLab
+namespace FiguryLib
 {
     public interface IMierzalna1D
     {
@@ -52,8 +53,7 @@ namespace FiguryLab
             DefaultColor = ConsoleColor.Blue;
         }
 
-        public double Dlugosc =>
-            Math.Round(Math.Sqrt((P2.X - P1.X) * (P2.X - P1.X) + (P2.Y - P1.Y) * (P2.Y - P1.Y)), 2);
+        public double Dlugosc =>  Math.Round(Math.Sqrt((P2.X - P1.X) * (P2.X - P1.X) + (P2.Y - P1.Y) * (P2.Y - P1.Y)), 2);
 
         public override string ToString() => $"L({P1}, {P2})";
 
@@ -61,13 +61,16 @@ namespace FiguryLab
         {
             Console.ResetColor();
             Console.ForegroundColor = this.DefaultColor;
-            Console.WriteLine(this + $" dlugosc={Dlugosc:F2}");
+            Console.WriteLine(this + $" dlugosc={Math.Round(Dlugosc, 2):F2}");
             Console.ResetColor();
         }
 
         public bool Equals(Odcinek other) =>
             other != null && P1 == other.P1 && P2 == other.P2;
     }
+
+
+
 
     public class Okrag : Figura, IMierzalna1D
     {
@@ -76,13 +79,28 @@ namespace FiguryLab
         }
 
         public Punkt Srodek { get; set; }
-        public double Promien;
+        private double promien;
+        public double Promien
+        {
+            get
+            {
+                return promien;
+            }
+            set
+            {
+                if (value < 0)
+                    promien = 0;
+                else
+                {
+                    promien = value;
+                }
+            }
+        }
         public Okrag(Punkt p1, int p2 = 1)
         {
-            if (p1 is null)
+            if (p1 == null)
                 throw new ArgumentException("Punkt nie może być null");
-            else
-                Srodek = p1;
+
             if (p2 < 0)
                 Promien = 0;
             else
@@ -90,21 +108,115 @@ namespace FiguryLab
                 Promien = p2;
                 DefaultColor = ConsoleColor.Cyan;
             }
+            Srodek = p1;
         }
         public override void Rysuj()
         {
             Console.ResetColor();
             Console.ForegroundColor = this.DefaultColor;
-            Console.WriteLine(this + $" dlugosc={Dlugosc:F2}");
+            Console.WriteLine(this + $" dlugosc={Math.Round(Dlugosc, 2):F2}");
             Console.ResetColor();
 
-
-
-
         }
-        public override string ToString() => $"O({Srodek}, {Promien})";
+        public override string ToString() => $"O({this.Srodek}, {Promien})";
 
-        public double Dlugosc => throw new NotImplementedException();
+        public double Dlugosc => Math.Round(2 * Math.PI * Promien, 2);
+    }
+
+
+
+    public class Kolo : Okrag, IMierzalna2D
+    {
+        public Kolo() : base(new Punkt(), 2)
+        {
+        }
+
+        public Kolo(Punkt p1, int p2) : base(p1, p2)
+        {
+            DefaultColor = ConsoleColor.Red;
+        }
+        public override string ToString() => $"K({Srodek}, {Promien})";
+
+        public override void Rysuj()
+        {
+            Console.ResetColor();
+            Console.ForegroundColor = DefaultColor;
+            Console.WriteLine($"K({ Srodek}, { Promien}) obwod={Math.Round(Obwod, 2):F2}, pole={Math.Round(Pole, 2):f2}");
+            Console.ResetColor();
+        }
+
+
+        public double Pole => Math.PI * Promien * Promien;
+
+        public double Obwod => 2 * Math.PI * Promien;
+    }
+
+
+
+
+    public class Ekran
+    {
+        private List<Figura> figury = new List<Figura>();
+        public void Dodaj(Figura f) => figury.Add(f);
+        public void Usun(Figura f) => figury.Remove(f);
+        public void Rysuj() => figury.ForEach(f => f.Rysuj());
+
+        public double SumarycznaDlugosc()
+        {
+            double wynik = 0.0;
+            for (int i = 0; i < figury.Count; i++)
+            {
+                if (figury[i] is Odcinek)
+                {
+                    var odcinek = figury[i].ToString().Split("(");
+                    var punkt1 = odcinek[2].Split(")");
+                    var punkt2 = odcinek[3].Split(")");
+                    var wyciagnijp1= punkt1[0].ToString().Split(",");
+                    var p1x = double.Parse(wyciagnijp1[0]);
+                    var p1y = double.Parse(wyciagnijp1[1].Trim());
+                    var wyciagnijp2 = punkt2[0].ToString().Split(",");
+                    var p2x = double.Parse(wyciagnijp2[0]);
+                    var p2y = double.Parse(wyciagnijp2[1].Trim());
+                    wynik = Math.Round(Math.Sqrt((p2x - p1x) * (p2x - p1x) + (p2y - p1y) * (p2y - p1y)), 2);
+
+                }
+                else if (figury[i] is Kolo)
+                {
+                    var kolo = figury[i].ToString().Split("(");
+                    var punkt1 = kolo[2].Split(")");
+                    var promien= double.Parse(punkt1[1].Split(",")[1].Trim());
+                    //var p1x = double.Parse(punkt1[0].Split(",")[0].Trim());
+                    //var p2y = double.Parse(punkt1[0].Split(",")[1].Trim());
+                    wynik += Math.Round((2 * Math.PI * promien),2);
+                }
+
+                else if (figury[i] is Okrag)
+                {
+                    var okrag = figury[i].ToString().Split("(");
+                    var punkt1 = okrag[2].Split(")");
+                    var promien = double.Parse(punkt1[1].Split(",")[1].Trim());
+                    wynik += Math.Round(2 * Math.PI * promien, 2);
+                }
+            }
+            return wynik;
+        }
+        public double SumarycznePole()
+        {
+            double wynik = 0.0;
+            for (int i = 0; i < figury.Count; i++)
+            {
+                
+                if (figury[i] is Kolo)
+                {
+                    var kolo = figury[i].ToString().Split("(");
+                    var punkt1 = kolo[2].Split(")");
+                    var promien = double.Parse(punkt1[1].Split(",")[1].Trim());
+                    wynik += Math.Round(Math.PI * promien* promien,2);
+                }
+
+            }
+            return wynik;
+        }
     }
 
 
@@ -112,25 +224,14 @@ namespace FiguryLab
     {
         static void Main(string[] args)
         {
-            // klasa Okrag, modyfikacje
-            Okrag o;
-            try
-            {
-                o = new Okrag(null, -1);
-                Console.WriteLine(o);
-            }
-            catch (ArgumentException e)
-            {
-                Console.WriteLine(e.Message);
-            }
 
-            o = new Okrag(new Punkt(1, 1), 1);
-            Console.WriteLine(o);
-            o.Srodek = new Punkt(0, 0);
-            o.Promien = 5;
-            o.Rysuj();
-            o.Promien = -1;
-            o.Rysuj();
+            // Ekran, sumaryczna długość
+            Ekran ekran = new Ekran();
+            ekran.Dodaj(new Punkt(1, 2));
+            ekran.Dodaj(new Odcinek(new Punkt(), new Punkt(1, 1)));
+            ekran.Dodaj(new Okrag(new Punkt(1, 1), 2));
+            ekran.Dodaj(new Kolo(new Punkt(-1, -1), 3));
+            Console.WriteLine("sumaryczna dlugosc = " + ekran.SumarycznaDlugosc());
         }
     }
 }
