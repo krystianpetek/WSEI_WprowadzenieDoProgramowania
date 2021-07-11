@@ -18,7 +18,7 @@ namespace Figury
         public override string ToString() => $"Point({X},{Y})";
         public override void Draw()
         {
-            Console.WriteLine("drawing: " + $"{this} (x={this.X}, y={this.Y}), {Color}");
+            Console.WriteLine("drawing: " + $"{this.Label} (x={this.X}, y={this.Y}), {Color}");
         }
         #region implementation of IEquatable<Point>
         // https://docs.microsoft.com/en-us/dotnet/api/system.object.equals?view=netstandard-2.0
