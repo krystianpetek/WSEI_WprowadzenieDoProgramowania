@@ -62,14 +62,32 @@ namespace FiguryTest
             Console.WriteLine(); 
             var kolo = new Wheel();
             kolo.Srodek = new Point(5, 4);
-            kolo.Promien = 2.5;
+            kolo.Promien = 3;
             kolo.Draw();
-            var kolo2 = new Wheel(new Point(5, 4), 2.5);
+            var kolo2 = new Wheel(new Point(5, 4), 3);
             kolo2.Draw();
             Console.WriteLine(kolo == kolo2);
 
+            // VECTOR
+            var vector1 = new Vector(-11, 2);
+            Console.WriteLine();
+            Console.WriteLine("Okrag");
+            okrag.Draw();
+            okrag.Move(vector1);
+            okrag.Draw();
+            Console.WriteLine(  );
+            Console.WriteLine("KOLO");
+            kolo.Draw();
+            kolo.Move(vector1);
+            kolo.Draw();
 
+            var vector2 = new Vector(5, -3);
+            Console.WriteLine();
+            Console.WriteLine("Linia");
+            linia2.EndPoint = new Point(1, 1);
+            linia2.Draw();
+            linia2.Move(vector2);
+            linia2.Draw();
         }
-
     }
 }

@@ -26,5 +26,7 @@ namespace Figury
             Console.WriteLine($"drawing: {this}, {Color}, Circumference = {Circumference}, Surface = {Surface}");
         }
         public override string ToString() => $"Wheel( {Srodek} {Promien} )";
+    
+
     }
 }

@@ -47,10 +47,14 @@ namespace Figury
             return c1.Equals(c2);
         }
         static public bool operator !=(Circle c1, Circle c2) => !(c1 == c2);
+        public override string ToString() => $"Circle({Srodek}, {Promien})";
 
         public void Move(Vector v)
         {
-            throw new NotImplementedException();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"Przesuwam {this.Label} o wektor [{v.X},{v.Y}]");
+            Console.ResetColor();
+            Srodek = new Point(Srodek.X + v.X,Srodek.Y+ v.Y);
         }
     }
 }

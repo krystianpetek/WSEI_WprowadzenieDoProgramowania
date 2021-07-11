@@ -23,7 +23,7 @@ namespace Figury
 
         public override void Draw()
         {
-            Console.WriteLine($"drawing: {this.Label}, {Color}, Length = {Length}");
+            Console.WriteLine($"drawing: {this}, {Color}, Length = {Math.Round(Length)}");
         }
 
         #region implementation of IEquatable<LineSegment>
@@ -46,7 +46,11 @@ namespace Figury
 
         public void Move(Vector v)
         {
-            throw new NotImplementedException();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"Przesuwam {this.Label} o wektor [{v.X},{v.Y}]");
+            Console.ResetColor();
+            this.StartPoint = new Point(StartPoint.X + v.X, StartPoint.Y + v.Y);
+            this.EndPoint = new Point(EndPoint.X + v.X, EndPoint.Y + v.Y);
         }
     }
 }
