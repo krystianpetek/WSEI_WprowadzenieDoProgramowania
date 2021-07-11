@@ -182,6 +182,36 @@ namespace MinimalnyProstokatOtaczajacy
             }
             Console.WriteLine(poprzedniWynik);
             */
+
+
+
+//            1
+//6
+//p 3 3
+//p 5 5
+//p 1 8
+//p 0 9
+//p 0 10
+//p - 55 1
+
+//3
+//5
+//p 3 3
+//p 5 5
+//p 1 8
+//p 0 9
+//p - 55 1
+
+//3
+//c 10 10 20
+//c 20 20 10
+//c 40 10 10
+
+//2
+//l 0 0 100 20
+//l 10 - 10 10 98
+
+
         }
 
     }
