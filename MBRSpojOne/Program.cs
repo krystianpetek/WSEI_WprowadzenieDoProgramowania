@@ -11,8 +11,8 @@ namespace MBRSpojOne
     public class Kolo : IFigura
     {
         public Punkt SRODEK;
-        public double PROMIEN;
-        public Kolo(Punkt srodek, double promien)
+        public int PROMIEN;
+        public Kolo(Punkt srodek, int promien)
         {
             SRODEK = srodek;
             PROMIEN = promien;
@@ -43,8 +43,8 @@ namespace MBRSpojOne
         public override string ToString() => $"Odcinek {P1}, {P2}";
         public Prostokat GetBoundingRectangle()
         {
-            double Pro1X = 0, Pro2X = 0, Pro3X = 0, Pro4X = 0;
-            double Pro1Y = 0, Pro2Y = 0, Pro3Y = 0, Pro4Y = 0;
+            int Pro1X = 0, Pro2X = 0, Pro3X = 0, Pro4X = 0;
+            int Pro1Y = 0, Pro2Y = 0, Pro3Y = 0, Pro4Y = 0;
             if (P2.X > P1.X)
             {
                 Pro1X = P1.X;
@@ -105,8 +105,8 @@ namespace MBRSpojOne
                     {
                         case "p":
                             var pS = new Punkt(
-                                double.Parse(liniaPrzypadek[1]),
-                                double.Parse(liniaPrzypadek[2]));
+                                int.Parse(liniaPrzypadek[1]),
+                                int.Parse(liniaPrzypadek[2]));
 
                             lista.Add(pS.GetBoundingRectangle());
                             break;
@@ -114,19 +114,19 @@ namespace MBRSpojOne
                         case "c":
                             var cS = new Kolo(
                                 new Punkt(
-                                    double.Parse(liniaPrzypadek[1]),
-                                    double.Parse(liniaPrzypadek[2])),
-                                double.Parse(liniaPrzypadek[3]));
+                                    int.Parse(liniaPrzypadek[1]),
+                                    int.Parse(liniaPrzypadek[2])),
+                                int.Parse(liniaPrzypadek[3]));
                         
                             lista.Add(cS.GetBoundingRectangle());
                             break;
                 
                         case "l":
                             var lS = new Odcinek(
-                                new Punkt(double.Parse(liniaPrzypadek[1]),
-                                double.Parse(liniaPrzypadek[2])),
-                                new Punkt(double.Parse(liniaPrzypadek[3]),
-                                double.Parse(liniaPrzypadek[4])));
+                                new Punkt(int.Parse(liniaPrzypadek[1]),
+                                int.Parse(liniaPrzypadek[2])),
+                                new Punkt(int.Parse(liniaPrzypadek[3]),
+                                int.Parse(liniaPrzypadek[4])));
                             
                             lista.Add(lS.GetBoundingRectangle());
                             break;
@@ -194,9 +194,9 @@ namespace MBRSpojOne
 
     public class Punkt : IFigura
     {
-        public double X;
-        public double Y;
-        public Punkt(double x, double y)
+        public int X;
+        public int Y;
+        public Punkt(int x, int y)
         {
             this.X = x;
             this.Y = y;

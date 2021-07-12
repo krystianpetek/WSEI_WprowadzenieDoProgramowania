@@ -10,18 +10,8 @@ namespace MBRSpoj
     {
 
         public Punkt SRODEK;
-        private double promien;
-        public double PROMIEN
-        {
-            get { return promien; }
-            set
-            {
-                if (value > 0)
-                    promien = value;
-                else promien = 1;
-            }
-        }
-        public Kolo(Punkt srodek, double promien)
+        public int PROMIEN;
+        public Kolo(Punkt srodek, int promien)
         {
             SRODEK = srodek;
             PROMIEN = promien;

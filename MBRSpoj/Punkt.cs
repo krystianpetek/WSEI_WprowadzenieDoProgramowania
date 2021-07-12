@@ -8,9 +8,9 @@ namespace MBRSpoj
 {
     public class Punkt : IFigura
     {
-        public double X;
-        public double Y;
-        public Punkt(double x, double y)
+        public int X;
+        public int Y;
+        public Punkt(int x, int y)
         {
             this.X = x;
             this.Y = y;

@@ -18,8 +18,8 @@ namespace MBRSpoj
         public override string ToString() => $"Odcinek {P1}, {P2}";
         public Prostokat GetBoundingRectangle()
         {
-            double Pro1X = 0, Pro2X = 0, Pro3X = 0, Pro4X = 0;
-            double Pro1Y = 0, Pro2Y = 0, Pro3Y = 0, Pro4Y = 0;
+            int Pro1X = 0, Pro2X = 0, Pro3X = 0, Pro4X = 0;
+            int Pro1Y = 0, Pro2Y = 0, Pro3Y = 0, Pro4Y = 0;
             if (P2.X > P1.X)
             {
                 Pro1X = P1.X;

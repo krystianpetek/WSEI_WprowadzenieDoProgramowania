@@ -19,8 +19,8 @@ namespace MBRSpoj
                     {
                         case "p":
                             var pS = new Punkt(
-                                double.Parse(liniaPrzypadek[1]),
-                                double.Parse(liniaPrzypadek[2]));
+                                int.Parse(liniaPrzypadek[1]),
+                                int.Parse(liniaPrzypadek[2]));
 
                             lista.Add(pS.GetBoundingRectangle());
                             break;
@@ -28,31 +28,31 @@ namespace MBRSpoj
                         case "c":
                             var cS = new Kolo(
                                 new Punkt(
-                                    double.Parse(liniaPrzypadek[1]),
-                                    double.Parse(liniaPrzypadek[2])),
-                                double.Parse(liniaPrzypadek[3]));
+                                    int.Parse(liniaPrzypadek[1]),
+                                    int.Parse(liniaPrzypadek[2])),
+                                int.Parse(liniaPrzypadek[3]));
                             lista.Add(cS.GetBoundingRectangle());
                             break;
                         case "l":
                             var lS = new Odcinek(
-                                new Punkt(double.Parse(liniaPrzypadek[1]),
-                                double.Parse(liniaPrzypadek[2])),
-                                new Punkt(double.Parse(liniaPrzypadek[3]),
-                                double.Parse(liniaPrzypadek[4])));
+                                new Punkt(int.Parse(liniaPrzypadek[1]),
+                                int.Parse(liniaPrzypadek[2])),
+                                new Punkt(int.Parse(liniaPrzypadek[3]),
+                                int.Parse(liniaPrzypadek[4])));
                             lista.Add(lS.GetBoundingRectangle());
                             break;
                     }
                 }
-                Console.ReadLine();
                 MinimumBoundingRectangle(lista);
+                Console.ReadLine();
             }
         }
         public static void MinimumBoundingRectangle(IList<IFigura> listaFigur)
         {
             int lewyDolX = 0, lewyDolY = 0;
             int prawaGoraX = 0, prawaGoraY = 0;
-            int nowyLewyDolX = 0, nowyLewyDolY = 0;
-            int nowaPrawaGoraX = 0, nowaPrawaGoraY = 0;
+            int nowyLewyDolX, nowyLewyDolY;
+            int nowaPrawaGoraX, nowaPrawaGoraY;
             for (int i = 0; i < listaFigur.Count; i++)
             {
                 var x = listaFigur[i];
