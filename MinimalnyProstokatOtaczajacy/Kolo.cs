@@ -20,7 +20,6 @@ namespace MinimalnyProstokatOtaczajacy
             get { return promien; }
             set { if (value > 0)
                     promien = value;
-                else promien = 1;
             }
         }
         public Kolo(Punkt srodek, double promien)

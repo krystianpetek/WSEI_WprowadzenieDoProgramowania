@@ -40,8 +40,8 @@ namespace MinimalnyProstokatOtaczajacy
             Console.ResetColor();
             Console.WriteLine();
         }
-        //public override string ToString() => $"Prostokąt {P1}, {P2}, {P3}, {P4}";
-        public override string ToString() => $"{P1} {P3} {P2} {P4}";
+        public override string ToString() => $"Prostokąt {P1}, {P2}, {P3}, {P4}";
+        //public override string ToString() => $"{P1} {P3} {P2} {P4}";
         public Prostokat GetBoundingRectangle()
         { 
             return new Prostokat(P1, P2, P3, P4);

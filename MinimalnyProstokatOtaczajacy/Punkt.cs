@@ -17,8 +17,8 @@ namespace MinimalnyProstokatOtaczajacy
         }
         public Punkt() : this(0, 0)
         { }
-        //public override string ToString() => $"Punkt X: {X}, Y: {Y}";
-        public override string ToString() => $"{X},{Y}";
+        public override string ToString() => $"Punkt X={X}, Y={Y}";
+        //public override string ToString() => $"{X},{Y}";
         public Prostokat GetBoundingRectangle()
         {
             Punkt LG = new Punkt(X, Y);
