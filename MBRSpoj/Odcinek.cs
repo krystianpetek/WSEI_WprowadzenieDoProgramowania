@@ -4,30 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MinimalnyProstokatOtaczajacy
+namespace MBRSpoj
 {
     public class Odcinek : IFigura
     {
-        private Punkt A;
-
-        public Punkt P1
-        {
-            get { return A; }
-            set { A = value; }
-        }
-        private Punkt B;
-        public Punkt P2
-        {
-            get { return B; }
-            set { B = value; }
-        }
+        public Punkt P1;
+        public Punkt P2;
         public Odcinek(Punkt p1, Punkt p2)
         {
             P1 = p1;
             P2 = p2;
         }
-        public Odcinek() : this(new Punkt(0, 0), new Punkt(0, 0))
-        { }
         public override string ToString() => $"Odcinek {P1}, {P2}";
         public Prostokat GetBoundingRectangle()
         {
@@ -53,14 +40,14 @@ namespace MinimalnyProstokatOtaczajacy
                 Pro3X = P2.X;
             }
 
-            if(P2.Y > P1.Y)
+            if (P2.Y > P1.Y)
             {
                 Pro1Y = P2.Y;
                 Pro2Y = P2.Y;
                 Pro3Y = P1.Y;
                 Pro4Y = P1.Y;
             }
-            else if(P2.Y < P1.Y)
+            else if (P2.Y < P1.Y)
             {
                 Pro1Y = P1.Y;
                 Pro2Y = P1.Y;

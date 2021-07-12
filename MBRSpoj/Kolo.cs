@@ -4,21 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MinimalnyProstokatOtaczajacy
+namespace MBRSpoj
 {
     public class Kolo : IFigura
     {
-        private Punkt srodek;
-        public Punkt SRODEK
-        {
-            get { return srodek; }
-            set { srodek = value; }
-        }
+
+        public Punkt SRODEK;
         private double promien;
         public double PROMIEN
         {
             get { return promien; }
-            set { if (value > 0)
+            set
+            {
+                if (value > 0)
                     promien = value;
                 else promien = 1;
             }
@@ -28,8 +26,7 @@ namespace MinimalnyProstokatOtaczajacy
             SRODEK = srodek;
             PROMIEN = promien;
         }
-        public Kolo() : this(new Punkt(0,0),1)
-        { }
+     
         public override string ToString() => $"Koło S:{SRODEK.X},{SRODEK.Y} R:{PROMIEN}";
         public Prostokat GetBoundingRectangle()
         {

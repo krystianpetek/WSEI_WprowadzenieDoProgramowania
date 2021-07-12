@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MinimalnyProstokatOtaczajacy
+namespace MBRSpoj
 {
     public class Program
-    {        
+    {
         static void Main(string[] args)
         {
             int t = int.Parse(Console.ReadLine()); // LICZBA TESTOW
@@ -17,8 +14,8 @@ namespace MinimalnyProstokatOtaczajacy
                 int n = int.Parse(Console.ReadLine()); // LICZBA OBIEKTÓW W TEŚCIE
                 for (int j = 0; j < n; j++)
                 {
-                    var liniaPrzypadek = Console.ReadLine().Split(" ",StringSplitOptions.RemoveEmptyEntries);
-                    switch(liniaPrzypadek[0])
+                    var liniaPrzypadek = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+                    switch (liniaPrzypadek[0])
                     {
                         case "p":
                             var pS = new Punkt(
@@ -49,48 +46,13 @@ namespace MinimalnyProstokatOtaczajacy
                 Console.ReadLine();
                 MinimumBoundingRectangle(lista);
             }
-
-            //var p1 = new Punkt(3, 3);
-            //Console.WriteLine(p1);
-            //p1.GetBoundingRectangle().Draw();
-
-            //p1 = new Punkt(5, 99);
-            //Console.WriteLine();
-            //Console.WriteLine(p1);
-            //p1.GetBoundingRectangle().Draw();
-
-            //Console.WriteLine();
-            //var k1 = new Kolo(new Punkt(5, 5), 5);
-            //Console.WriteLine(k1);
-            //k1.GetBoundingRectangle().Draw();
-            //k1.PROMIEN = 4;
-            //k1.SRODEK = new Punkt(0, 1);
-
-            //Console.WriteLine();
-            //Console.WriteLine(k1);
-            //k1.GetBoundingRectangle().Draw();
-            //Console.WriteLine();
-            
-            //Prostokat PC1 = new Kolo(new Punkt(10, 10), 20).GetBoundingRectangle();
-            //Console.WriteLine(PC1);
-            //PC1.Draw();
-
-            //Console.WriteLine();
-            //var PR1 = new Prostokat();
-            //Console.WriteLine(PR1);
-            //PR1.Draw();
-
-            //Console.WriteLine();
-            //var o1 = new Odcinek(new Punkt(-4,-4), new Punkt(4, 4));
-            //Console.WriteLine(o1);
-            //o1.GetBoundingRectangle().Draw();
         }
         public static void MinimumBoundingRectangle(IList<IFigura> listaFigur)
         {
-            int lewyDolX=0, lewyDolY=0;
-            int prawaGoraX=0, prawaGoraY=0;
-            int nowyLewyDolX=0, nowyLewyDolY=0;
-            int nowaPrawaGoraX=0, nowaPrawaGoraY=0;
+            int lewyDolX = 0, lewyDolY = 0;
+            int prawaGoraX = 0, prawaGoraY = 0;
+            int nowyLewyDolX = 0, nowyLewyDolY = 0;
+            int nowaPrawaGoraX = 0, nowaPrawaGoraY = 0;
             for (int i = 0; i < listaFigur.Count; i++)
             {
                 var x = listaFigur[i];
@@ -98,12 +60,12 @@ namespace MinimalnyProstokatOtaczajacy
                 nowyLewyDolY = int.Parse(x.ToString().Split(" ")[1].Split(",")[1]);
                 nowaPrawaGoraX = int.Parse(x.ToString().Split(" ")[2].Split(",")[0]);
                 nowaPrawaGoraY = int.Parse(x.ToString().Split(" ")[2].Split(",")[1]);
-                
-                if(i == 0)
+
+                if (i == 0)
                 {
                     lewyDolX = nowyLewyDolX;
                     lewyDolY = nowyLewyDolY;
-                    prawaGoraX= nowaPrawaGoraX;
+                    prawaGoraX = nowaPrawaGoraX;
                     prawaGoraY = nowaPrawaGoraY;
                 }
 
@@ -114,12 +76,12 @@ namespace MinimalnyProstokatOtaczajacy
                     lewyDolY = nowyLewyDolY;
 
                 if (nowaPrawaGoraX > prawaGoraX)
-                    prawaGoraX = nowaPrawaGoraX; 
+                    prawaGoraX = nowaPrawaGoraX;
 
-                if (nowaPrawaGoraY> prawaGoraY)
-                    prawaGoraY= nowaPrawaGoraY;
+                if (nowaPrawaGoraY > prawaGoraY)
+                    prawaGoraY = nowaPrawaGoraY;
             }
-                Console.WriteLine($"{lewyDolX} {lewyDolY} {prawaGoraX} {prawaGoraY}");
+            Console.WriteLine($"{lewyDolX} {lewyDolY} {prawaGoraX} {prawaGoraY}");
         }
     }
 }
