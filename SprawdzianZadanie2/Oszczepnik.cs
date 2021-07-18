@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sprawdzian2
+namespace SprawdzianZadanie2
 {
-    class Oszczepnik
+    public class Oszczepnik
     {
         public Oszczepnik(string imie, string nazwisko, string kraj)
         {
@@ -92,6 +92,7 @@ namespace sprawdzian2
             kr = kr.Trim();
             if (kr.Length != 3)
                 throw new ArgumentException("niepoprawny kod kraju!");
+            kr= kr.ToUpper();
             kraj = kr;
         }
 
@@ -126,23 +127,75 @@ namespace sprawdzian2
             get { return kraj; }
             set
             {
-                sprawdzKraj(value);  
+                sprawdzKraj(value);
             }
         }
 
+        List<string> tabela = new List<string>();
 
         public void ZarejestrujWynik(string wynik)
         {
-            if(LiczbaProb<6)
+            if (LiczbaProb < 6)
             {
-                if(wynik == "x" || wynik =="X")
+                if (wynik == "x" || wynik == "X")
                 {
+                    tabela.Add(0.ToString());
+                    proba++;
+                }
+                else if (Math.Round(double.Parse(wynik),2) > 0)
+                {
+                    tabela.Add($"{wynik.ToString():F2}");
+                    if (najlepszy < double.Parse(wynik))
+                        najlepszy = double.Parse(wynik);
+                    proba++;
+                }
+                else
+                {
+                    throw new ArgumentException("niepoprawny format");
 
                 }
             }
+            else
+            {
+                throw new ArgumentException("limit wykorzystany");
+            }
 
-            proba++;
+            
         }
+
+
+        public bool ProbujZarejestrowacWynik(string wynik)
+        {
+            if (LiczbaProb < 6)
+            {
+                if (wynik == "x" || wynik == "X")
+                {
+                    tabela.Add(0.ToString());
+                    proba++;
+                    return true;
+                }
+                else if (double.Parse(wynik) > 0)
+                {
+                    tabela.Add(wynik); 
+                    if (najlepszy < double.Parse(wynik))
+                        najlepszy = double.Parse(wynik);
+                    proba++;
+                    return true; 
+                }
+                else
+                {
+                    return false;
+
+                }
+                
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
 
         private int proba = 0;
         public int LiczbaProb
@@ -153,31 +206,74 @@ namespace sprawdzian2
             }
         }
 
+        private double najlepszy = 0;
         public double WynikNajlepszy
         {
             get
             {
-                if (LiczbaProb == 0)
-                    return 0.0;
+                if(tabela.Count == 0)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return najlepszy;
+                }
 
-                return WynikNajlepszy;
             }
         }
         public string WynikOstatni
         {
             get
             {
-                if (LiczbaProb > 0)
-                    return "";
-
-                return "";
+                if (tabela.Count == 0)
+                {
+                    return "X";
+                }
+                else if (double.Parse(tabela[tabela.Count - 1]) > 0)
+                    return $"{double.Parse(tabela[tabela.Count - 1]).ToString():F2}";
+                else
+                {
+                    return "X";
+                }
             }
         }
 
         public double WynikSredni
         {
-            get;
-            set;
+            get
+            {
+                if (tabela.Count == 0)
+                    return 0;
+                else
+                {
+                    double wynik=0;
+                    for(int i = 0;i<tabela.Count;i++)
+                    {
+                        wynik += double.Parse(tabela[i]);
+                    }
+                    wynik /= tabela.Count - 1;
+                    return wynik;
+                }
+            }
+        }
+
+        public override string ToString()
+        {
+            string wyjscie = $"{Imie} {Nazwisko} ({Kraj})\nwyniki: ";
+            if (tabela.Count == 0)
+                wyjscie += "-";
+            else
+            {
+                for (int i = 0; i < tabela.Count-2; i++)
+                {
+                    wyjscie += $"{tabela[i]}, ";
+                }
+                wyjscie += tabela[tabela.Count - 1];
+            }
+            wyjscie += $"\nliczba prob: {LiczbaProb}, wynik najlepszy: {WynikNajlepszy}, wynik sredni: {WynikSredni}";
+
+            return wyjscie;
         }
 
     }
