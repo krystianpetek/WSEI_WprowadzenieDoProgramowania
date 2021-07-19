@@ -11,7 +11,6 @@ namespace SprawdzianZadanie2
             Oszczepnik p = new Oszczepnik(imie: "krzysztof", nazwisko: "molenda", kraj: "pol");
             Console.WriteLine(p);
             p.ZarejestrujWynik("67");
-            p.ZarejestrujWynik("71,12");
             Console.WriteLine(p);
             Console.WriteLine(p.ProbujZarejestrowacWynik("x"));
             p.ZarejestrujWynik("70,5");

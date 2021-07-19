@@ -107,7 +107,6 @@ namespace SprawdzianZadanie2
         }
 
         private string kraj;
-
         public string Kraj
         {
             get { return kraj; }
@@ -118,7 +117,6 @@ namespace SprawdzianZadanie2
         }
 
         List<string> tabela = new List<string>();
-
         public void ZarejestrujWynik(string wynik)
         {
             if (LiczbaProb < 6)
@@ -129,10 +127,8 @@ namespace SprawdzianZadanie2
                     proba++;
                 }
                 else if(double.Parse(wynik) > 0)
-                {
-
-                    
-                    tabela.Add(wynik);
+                {                    
+                    tabela.Add($"{double.Parse(wynik):F2}");
                     if (najlepszy < double.Parse(wynik))
                         najlepszy = Math.Round(double.Parse(wynik),2);
                     proba++;
@@ -197,7 +193,7 @@ namespace SprawdzianZadanie2
                 }
                 else
                 {
-                    return najlepszy;
+                    return Math.Round(najlepszy,2);
                 }
 
             }
@@ -211,7 +207,7 @@ namespace SprawdzianZadanie2
                     return "X";
                 }
                 else if (double.Parse(tabela[tabela.Count - 1]) > 0)
-                    return $"{double.Parse(tabela[tabela.Count - 1]):F2}";
+                    return tabela[tabela.Count - 1];
                 else
                 {
                     return "X";
@@ -230,7 +226,7 @@ namespace SprawdzianZadanie2
                     double wynik = 0;
                     for (int i = 0; i < tabela.Count; i++)
                     {
-                        wynik += Math.Round(double.Parse(tabela[i]), 2);
+                        wynik += double.Parse(tabela[i]);
                     }
                     wynik = wynik/tabela.Count;
                     return Math.Round(wynik,2);
