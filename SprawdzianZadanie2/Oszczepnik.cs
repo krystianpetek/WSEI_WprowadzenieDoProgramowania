@@ -24,27 +24,22 @@ namespace SprawdzianZadanie2
 
             if (im.Length > 2)
             {
-
                 for (int i = 0; i < im.Length; i++)
                 {
                     if (!char.IsLetter(im[i]))
                     {
                         throw new ArgumentException("Niepoprawna nazwa!");
-
                     }
                 }
                 im = im.Trim();
                 var wynik = "";
-                for (int i = 0; i < im.Length; i++)
+                wynik = im[0].ToString().ToUpper();
+
+                for (int i = 1; i < im.Length; i++)
                 {
-                    if (i == 0)
-                    {
-                        wynik = im[0].ToString().ToUpper();
-                    }
                     wynik += im[i].ToString().ToLower();
                 }
-
-                this.imie = im;
+                this.imie = wynik;
             }
             else
             {
@@ -57,30 +52,24 @@ namespace SprawdzianZadanie2
             {
                 throw new ArgumentException("Nazwa nie moze byc null!");
             }
-
             if (na.Length > 2)
             {
-
                 for (int i = 0; i < na.Length; i++)
                 {
                     if (!char.IsLetter(na[i]))
                     {
                         throw new ArgumentException("Niepoprawna nazwa!");
-
                     }
                 }
                 na = na.Trim();
                 var wynik = "";
-                for (int i = 0; i < na.Length; i++)
+                wynik = na[0].ToString().ToUpper();
+
+                for (int i = 1; i < na.Length; i++)
                 {
-                    if (i == 0)
-                    {
-                        wynik = na[0].ToString().ToUpper();
-                    }
                     wynik += na[i].ToString().ToLower();
                 }
-
-                this.nazwisko = na;
+                this.nazwisko = wynik;
             }
             else
             {
@@ -92,13 +81,11 @@ namespace SprawdzianZadanie2
             kr = kr.Trim();
             if (kr.Length != 3)
                 throw new ArgumentException("niepoprawny kod kraju!");
-            kr= kr.ToUpper();
+            kr = kr.ToUpper();
             kraj = kr;
         }
 
-
         private string imie;
-
         public string Imie
         {
             get { return imie; }
@@ -117,7 +104,6 @@ namespace SprawdzianZadanie2
             {
                 sprawdzNazwisko(value);
             }
-
         }
 
         private string kraj;
@@ -139,30 +125,28 @@ namespace SprawdzianZadanie2
             {
                 if (wynik == "x" || wynik == "X")
                 {
-                    tabela.Add(0.ToString());
+                    tabela.Add("X");
                     proba++;
                 }
-                else if (Math.Round(double.Parse(wynik),2) > 0)
+                else if(double.Parse(wynik) > 0)
                 {
-                    tabela.Add($"{wynik.ToString():F2}");
+
+                    
+                    tabela.Add(wynik);
                     if (najlepszy < double.Parse(wynik))
-                        najlepszy = double.Parse(wynik);
+                        najlepszy = Math.Round(double.Parse(wynik),2);
                     proba++;
                 }
                 else
                 {
                     throw new ArgumentException("niepoprawny format");
-
                 }
             }
             else
             {
                 throw new ArgumentException("limit wykorzystany");
             }
-
-            
         }
-
 
         public bool ProbujZarejestrowacWynik(string wynik)
         {
@@ -176,26 +160,22 @@ namespace SprawdzianZadanie2
                 }
                 else if (double.Parse(wynik) > 0)
                 {
-                    tabela.Add(wynik); 
+                    tabela.Add(wynik);
                     if (najlepszy < double.Parse(wynik))
                         najlepszy = double.Parse(wynik);
                     proba++;
-                    return true; 
+                    return true;
                 }
                 else
                 {
                     return false;
-
                 }
-                
             }
             else
             {
                 return false;
             }
-
         }
-
 
         private int proba = 0;
         public int LiczbaProb
@@ -211,7 +191,7 @@ namespace SprawdzianZadanie2
         {
             get
             {
-                if(tabela.Count == 0)
+                if (tabela.Count == 0)
                 {
                     return 0;
                 }
@@ -231,7 +211,7 @@ namespace SprawdzianZadanie2
                     return "X";
                 }
                 else if (double.Parse(tabela[tabela.Count - 1]) > 0)
-                    return $"{double.Parse(tabela[tabela.Count - 1]).ToString():F2}";
+                    return $"{double.Parse(tabela[tabela.Count - 1]):F2}";
                 else
                 {
                     return "X";
@@ -247,13 +227,13 @@ namespace SprawdzianZadanie2
                     return 0;
                 else
                 {
-                    double wynik=0;
-                    for(int i = 0;i<tabela.Count;i++)
+                    double wynik = 0;
+                    for (int i = 0; i < tabela.Count; i++)
                     {
-                        wynik += double.Parse(tabela[i]);
+                        wynik += Math.Round(double.Parse(tabela[i]), 2);
                     }
-                    wynik /= tabela.Count - 1;
-                    return wynik;
+                    wynik = wynik/tabela.Count;
+                    return Math.Round(wynik,2);
                 }
             }
         }
@@ -265,16 +245,15 @@ namespace SprawdzianZadanie2
                 wyjscie += "-";
             else
             {
-                for (int i = 0; i < tabela.Count-2; i++)
+                for (int i = 0; i < tabela.Count-1; i++)
                 {
                     wyjscie += $"{tabela[i]}, ";
                 }
-                wyjscie += tabela[tabela.Count - 1];
+                wyjscie += $"{tabela[tabela.Count - 1]}";
             }
             wyjscie += $"\nliczba prob: {LiczbaProb}, wynik najlepszy: {WynikNajlepszy}, wynik sredni: {WynikSredni}";
 
             return wyjscie;
         }
-
     }
 }
