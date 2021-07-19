@@ -223,11 +223,14 @@ namespace SprawdzianZadanie2
                 else
                 {
                     double wynik = 0;
+                    int licznikLiczb=0;
                     for (int i = 0; i < tabela.Count; i++)
                     {
                         wynik += double.Parse(tabela[i]);
+                        if (double.Parse(tabela[i]) != 0 )
+                            licznikLiczb++;
                     }
-                    wynik = wynik/tabela.Count;
+                    wynik = wynik/licznikLiczb;
                     return Math.Round(wynik,2);
                 }
             }
@@ -240,13 +243,16 @@ namespace SprawdzianZadanie2
                 wyjscie += "-";
             else
             {
-                for (int i = 0; i < tabela.Count-1; i++)
+                for (int i = 0; i < tabela.Count; i++)
                 {
+                    if (double.Parse(tabela[i]) == 0)
+                        wyjscie += "X, ";
+                    else
                     wyjscie += $"{tabela[i]}, ";
                 }
-                wyjscie += $"{tabela[tabela.Count - 1]}";
+                wyjscie = wyjscie.Substring(1, wyjscie.Length - 3);
             }
-            wyjscie += $"\nliczba prob: {LiczbaProb}, wynik najlepszy: {WynikNajlepszy}, wynik sredni: {WynikSredni}";
+            wyjscie += $"\nliczba prob: {LiczbaProb}, wynik najlepszy: {WynikNajlepszy:F2}, wynik sredni: {WynikSredni:F2}";
 
             return wyjscie;
         }
