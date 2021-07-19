@@ -35,7 +35,7 @@ namespace SprawdzianZadanie3
 
         public double Dlugosc => Bok * 4;
 
-        public Kwadrat( Punkt DOLNY, int BOK)
+        public Kwadrat( Punkt DOLNY, int bok)
         {
             if (DOLNY == null)
             {
@@ -45,11 +45,11 @@ namespace SprawdzianZadanie3
             {
                 LewyDolny = DOLNY;
             }
-            if (BOK < 0)
-                bok = 0;
+            if (bok < 0)
+                this.bok = 0;
             else
             {
-                bok = BOK;
+                this.bok = bok;
             }
             DefaultColor = ConsoleColor.Green;
             

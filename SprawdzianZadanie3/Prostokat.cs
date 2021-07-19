@@ -10,7 +10,7 @@ namespace SprawdzianZadanie3
     {
         private int bokdwa;
 
-        public int BokDrugi
+        public int bokDrugi
         {
             get
             {
@@ -27,34 +27,34 @@ namespace SprawdzianZadanie3
             
             }
         }
-        public Prostokat(Punkt DOLNY, int Bok, int BokDrugi) : base(DOLNY, Bok)
+        public Prostokat(Punkt DOLNY, int bok, int bokDrugi) : base(DOLNY, bok)
         {
-            if (BokDrugi < 0)
+            if (bokDrugi < 0)
                 bokdwa = 0;
             else
             {
-                bokdwa = BokDrugi;
+                bokdwa = bokDrugi;
             }
             DefaultColor = ConsoleColor.Yellow;
         }
         public Prostokat() : this(new Punkt(), 1, 2) { }
-        public override string ToString() => $"R({LewyDolny}, {Bok} x {BokDrugi})";
+        public override string ToString() => $"R({LewyDolny}, {Bok} x {bokDrugi})";
     
     
         public new void Rysuj()
         {
             Console.ResetColor();
             Console.ForegroundColor = this.DefaultColor;
-            Console.WriteLine($"R({LewyDolny}, {Bok} x {BokDrugi}) obwod={Obwod:F2}, pole={Pole:F2}");
+            Console.WriteLine($"R({LewyDolny}, {Bok} x {bokDrugi}) obwod={Obwod:F2}, pole={Pole:F2}");
             Console.ResetColor();
         }
 
 
-        public new double Pole => Bok * BokDrugi;
+        public new double Pole => Bok * bokDrugi;
 
-        public new double Obwod => Bok * 2 + BokDrugi *2;
+        public new double Obwod => Bok * 2 + bokDrugi *2;
 
-        public new double Dlugosc => Bok * 2 + BokDrugi * 2;
+        public new double Dlugosc => Bok * 2 + bokDrugi * 2;
 
 
     }

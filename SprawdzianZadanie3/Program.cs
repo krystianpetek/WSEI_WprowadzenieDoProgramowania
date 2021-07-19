@@ -11,10 +11,10 @@ namespace SprawdzianZadanie3
     {
         static void Main(string[] args)
         {
-            // klasa Kwadrat, konstruktor domyślny
-            Kwadrat k = new Kwadrat();
-            Console.WriteLine(k);
-            k.Rysuj();
+            // klasa Prostokat, konstruktor domyślny
+            Prostokat p = new Prostokat();
+            Console.WriteLine(p);
+            p.Rysuj();
         }
     }
 }
