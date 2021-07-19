@@ -96,7 +96,6 @@ namespace SprawdzianZadanie2
         }
 
         private string nazwisko;
-
         public string Nazwisko
         {
             get { return nazwisko; }
