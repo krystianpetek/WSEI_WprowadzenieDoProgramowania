@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "zadanieKlasaPersonChild", "zadanieKlasaPersonChild\zadanieKlasaPersonChild.csproj", "{AB40D2D3-07D4-4B72-9363-A7144BB8DDA4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bank", "Bank\Bank.csproj", "{56F4E79F-4FF5-43FD-AEBE-85B4349AD5FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bank2", "Bank2\Bank2.csproj", "{F3C43347-F376-4D31-B8DE-37B9642D8199}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KontoWBanku", "KontoWBanku\KontoWBanku.csproj", "{1E6575F7-FF65-43F2-8AAF-F90905D0ADFF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankTesty", "BankTesty\BankTesty.csproj", "{B0543CCA-3A51-4F82-8C11-EB5FBF9D1769}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZwiazkiKlas", "ZwiazkiKlas\ZwiazkiKlas.csproj", "{B4301EC7-FBE7-40C9-BB11-39483743CC1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB40D2D3-07D4-4B72-9363-A7144BB8DDA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB40D2D3-07D4-4B72-9363-A7144BB8DDA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB40D2D3-07D4-4B72-9363-A7144BB8DDA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB40D2D3-07D4-4B72-9363-A7144BB8DDA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56F4E79F-4FF5-43FD-AEBE-85B4349AD5FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56F4E79F-4FF5-43FD-AEBE-85B4349AD5FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56F4E79F-4FF5-43FD-AEBE-85B4349AD5FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56F4E79F-4FF5-43FD-AEBE-85B4349AD5FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3C43347-F376-4D31-B8DE-37B9642D8199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3C43347-F376-4D31-B8DE-37B9642D8199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3C43347-F376-4D31-B8DE-37B9642D8199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3C43347-F376-4D31-B8DE-37B9642D8199}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E6575F7-FF65-43F2-8AAF-F90905D0ADFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E6575F7-FF65-43F2-8AAF-F90905D0ADFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E6575F7-FF65-43F2-8AAF-F90905D0ADFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E6575F7-FF65-43F2-8AAF-F90905D0ADFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0543CCA-3A51-4F82-8C11-EB5FBF9D1769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0543CCA-3A51-4F82-8C11-EB5FBF9D1769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0543CCA-3A51-4F82-8C11-EB5FBF9D1769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0543CCA-3A51-4F82-8C11-EB5FBF9D1769}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4301EC7-FBE7-40C9-BB11-39483743CC1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4301EC7-FBE7-40C9-BB11-39483743CC1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4301EC7-FBE7-40C9-BB11-39483743CC1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4301EC7-FBE7-40C9-BB11-39483743CC1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8823EB42-4B34-4F28-A7AB-0FAB607EC388}
+	EndGlobalSection
+EndGlobal
