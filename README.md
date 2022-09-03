@@ -1,2 +1,2 @@
-# lab11
+# WprowadzenieDoProgramowania
  SPRAWDZIAN
